@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio | Szkay Design Agency</title>
+    <meta name="description"
+        content="Browse websites, brand identities, flyers, social media designs and digital products created by Szkay Design Agency.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Shared site CSS, then this page's CSS -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg site-nav" aria-label="Main navigation">
+            <div class="container-fluid px-3 px-lg-4">
+
+                <!-- Logo (left) -->
+                <a class="navbar-brand site-logo" href="index.html">
+                    <img src="icon.png" alt="SZKAY Design Agency" class="logo-img">
+                </a>
+
+                <!-- Thin divider between logo and links (desktop only) -->
+                <span class="logo-divider d-none d-lg-block" aria-hidden="true"></span>
+
+                <!-- Mobile toggler -->
+                <button class="navbar-toggler site-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="toggler-bar"></span>
+                    <span class="toggler-bar"></span>
+                    <span class="toggler-bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+
+                    <!-- Links (next to the logo) -->
+                    <ul class="navbar-nav site-links">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a>
+                        </li>
+
+                        <!-- Services mega dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="services.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                            <div class="dropdown-menu mega-menu">
+                                <div class="mega-grid">
+                                    <a class="mega-item" href="services.html#website-development" style="--i:0">
+                                        <span class="mega-icon"><i class="bi bi-code-slash"></i></span>
+                                        <span class="mega-text"><strong>Website development</strong><small>Fast,
+                                                responsive websites built to convert</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#brand-identity" style="--i:1">
+                                        <span class="mega-icon"><i class="bi bi-vector-pen"></i></span>
+                                        <span class="mega-text"><strong>Brand identity design</strong><small>Logos,
+                                                colours and brand guidelines</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#flyer-designs" style="--i:2">
+                                        <span class="mega-icon"><i class="bi bi-card-image"></i></span>
+                                        <span class="mega-text"><strong>Flyer designs</strong><small>Print and digital
+                                                flyers that get noticed</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#mentorship" style="--i:3">
+                                        <span class="mega-icon"><i class="bi bi-mortarboard"></i></span>
+                                        <span class="mega-text"><strong>Mentorship</strong><small>One-on-one guidance in
+                                                design and code</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#digital-products" style="--i:4">
+                                        <span class="mega-icon"><i class="bi bi-box-seam"></i></span>
+                                        <span class="mega-text"><strong>Digital products</strong><small>Templates, kits
+                                                and ready-to-use assets</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#social-media-design" style="--i:5">
+                                        <span class="mega-icon"><i class="bi bi-megaphone"></i></span>
+                                        <span class="mega-text"><strong>Social media design</strong><small>Posts,
+                                                banners and campaign graphics</small></span>
+                                    </a>
+                                </div>
+                                <div class="mega-foot"><a href="services.html">View all services <i
+                                            class="bi bi-arrow-right"></i></a></div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <!-- Actions (right) -->
+                    <div class="nav-actions ms-lg-auto">
+                        <a class="btn nav-cta" href="contact.html">Start a project</a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Scroll progress line -->
+        <div class="scroll-progress" aria-hidden="true"></div>
+    </header>
+
+    <main>
+
+        <!-- ===== PAGE HERO ===== -->
+        <section class="page-hero">
+            <div class="container-xl">
+                <nav class="crumbs" aria-label="Breadcrumb" data-reveal>
+                    <a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Portfolio</span>
+                </nav>
+                <h1 class="hero-title">Work that shows what good design can do.</h1>
+                <p class="lead-text" data-reveal style="--d:.2s">A look at the websites, brand identities, flyers and digital
+                    assets we have created. Browse by category, or open a project to see more.</p>
+            </div>
+        </section>
+
+        <!-- ===== FILTER BAR ===== -->
+        <div class="pf-bar" role="group" aria-label="Filter projects by category">
+            <div class="container-xl">
+                <ul class="pf-filters">
+                    <li><button class="pf-chip is-active" type="button" data-filter="all" aria-pressed="true">All <span class="pf-count"></span></button></li>
+                    <li><button class="pf-chip" type="button" data-filter="websites" aria-pressed="false">Website development <span class="pf-count"></span></button></li>
+                    <li><button class="pf-chip" type="button" data-filter="brand-identity" aria-pressed="false">Brand identity <span class="pf-count"></span></button></li>
+                    <li><button class="pf-chip" type="button" data-filter="flyers" aria-pressed="false">Flyer designs <span class="pf-count"></span></button></li>
+                    <li><button class="pf-chip" type="button" data-filter="social-media" aria-pressed="false">Social media design <span class="pf-count"></span></button></li>
+                    <li><button class="pf-chip" type="button" data-filter="digital-products" aria-pressed="false">Digital products <span class="pf-count"></span></button></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ===== PROJECT GRID ===== -->
+        <section class="section pf-section" aria-live="polite">
+            <div class="container-xl">
+                <!-- Each card holds its own project details in data-* attributes (used by the pop-up) -->
+                <div class="row g-4" id="pfGrid">
+                    <div class="col-md-6 col-lg-4 pf-item" data-category="websites" data-reveal style="--d:0.00s">
+                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal" data-bs-target="#projectModal"
+                            data-title="Business website" data-label="Website development" data-img="3.jpg" data-alt="Business website project preview"
+                            data-desc="A responsive multi-page website built to present a business clearly and make it easy for customers to get in touch." data-tags="Responsive design, HTML / CSS / JavaScript, Contact form">
+                            <div class="work-thumb">
+                                <img src="3.jpg" alt="Business website project preview" loading="lazy">
+                                <span class="work-view"><i class="bi bi-arrows-angle-expand"></i> View project</span>
+                            </div>
+                            <div class="work-info">
+                                <h3>Business website</h3><span>Website development</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 pf-item" data-category="brand-identity" data-reveal style="--d:0.10s">
+                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal" data-bs-target="#projectModal"
+                            data-title="Logo and brand guide" data-label="Brand identity" data-img="2.jpg" data-alt="Logo and brand guide project preview"
+                            data-desc="A complete visual identity: logo, colour palette, typography and a guide that keeps the brand consistent everywhere." data-tags="Logo design, Colour palette, Brand guidelines">
+                            <div class="work-thumb">
+                                <img src="2.jpg" alt="Logo and brand guide project preview" loading="lazy">
+                                <span class="work-view"><i class="bi bi-arrows-angle-expand"></i> View project</span>
+                            </div>
+                            <div class="work-info">
+                                <h3>Logo and brand guide</h3><span>Brand identity</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 pf-item" data-category="flyers" data-reveal style="--d:0.20s">
+                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal" data-bs-target="#projectModal"
+                            data-title="Event flyer" data-label="Flyer designs" data-img="1.jpg" data-alt="Event flyer project preview"
+                            data-desc="A bold flyer with a clear message and call to action, delivered ready for print and for sharing online." data-tags="Print-ready file, Digital version, Layout and artwork">
+                            <div class="work-thumb">
+                                <img src="1.jpg" alt="Event flyer project preview" loading="lazy">
+                                <span class="work-view"><i class="bi bi-arrows-angle-expand"></i> View project</span>
+                            </div>
+                            <div class="work-info">
+                                <h3>Event flyer</h3><span>Flyer designs</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 pf-item" data-category="websites" data-reveal style="--d:0.00s">
+                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal" data-bs-target="#projectModal"
+                            data-title="Portfolio website" data-label="Website development" data-img="3.jpg" data-alt="Portfolio website project preview"
+                            data-desc="A clean portfolio site that lets the work lead, with fast loading and a layout that works on every screen." data-tags="Responsive design, Gallery layout, Launch support">
+                            <div class="work-thumb">
+                                <img src="3.jpg" alt="Portfolio website project preview" loading="lazy">
+                                <span class="work-view"><i class="bi bi-arrows-angle-expand"></i> View project</span>
+                            </div>
+                            <div class="work-info">
+                                <h3>Portfolio website</h3><span>Website development</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 pf-item" data-category="social-media" data-reveal style="--d:0.10s">
+                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal" data-bs-target="#projectModal"
+                            data-title="Social media campaign" data-label="Social media design" data-img="1.jpg" data-alt="Social media campaign project preview"
+                            data-desc="A set of matching post and story designs that give a campaign one consistent, recognisable look." data-tags="Post designs, Story designs, Reusable templates">
+                            <div class="work-thumb">
+                                <img src="1.jpg" alt="Social media campaign project preview" loading="lazy">
+                                <span class="work-view"><i class="bi bi-arrows-angle-expand"></i> View project</span>
+                            </div>
+                            <div class="work-info">
+                                <h3>Social media campaign</h3><span>Social media design</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 pf-item" data-category="brand-identity" data-reveal style="--d:0.20s">
+                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal" data-bs-target="#projectModal"
+                            data-title="Brand refresh" data-label="Brand identity" data-img="2.jpg" data-alt="Brand refresh project preview"
+                            data-desc="A fresh look for an established business, with an updated logo and colours that feel modern and confident." data-tags="Logo refresh, Colour palette, Stationery layouts">
+                            <div class="work-thumb">
+                                <img src="2.jpg" alt="Brand refresh project preview" loading="lazy">
+                                <span class="work-view"><i class="bi bi-arrows-angle-expand"></i> View project</span>
+                            </div>
+                            <div class="work-info">
+                                <h3>Brand refresh</h3><span>Brand identity</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 pf-item" data-category="websites" data-reveal style="--d:0.00s">
+                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal" data-bs-target="#projectModal"
+                            data-title="Landing page" data-label="Website development" data-img="3.jpg" data-alt="Landing page project preview"
+                            data-desc="A focused one-page site designed around a single goal: turning visitors into enquiries." data-tags="Landing page, Call to action, Mobile-first">
+                            <div class="work-thumb">
+                                <img src="3.jpg" alt="Landing page project preview" loading="lazy">
+                                <span class="work-view"><i class="bi bi-arrows-angle-expand"></i> View project</span>
+                            </div>
+                            <div class="work-info">
+                                <h3>Landing page</h3><span>Website development</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 pf-item" data-category="flyers" data-reveal style="--d:0.10s">
+                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal" data-bs-target="#projectModal"
+                            data-title="Promotion flyer" data-label="Flyer designs" data-img="1.jpg" data-alt="Promotion flyer project preview"
+                            data-desc="An eye-catching promotional flyer that puts the offer front and centre and gets noticed." data-tags="Promotion design, Print-ready file, Social version">
+                            <div class="work-thumb">
+                                <img src="1.jpg" alt="Promotion flyer project preview" loading="lazy">
+                                <span class="work-view"><i class="bi bi-arrows-angle-expand"></i> View project</span>
+                            </div>
+                            <div class="work-info">
+                                <h3>Promotion flyer</h3><span>Flyer designs</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 pf-item" data-category="digital-products" data-reveal style="--d:0.20s">
+                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal" data-bs-target="#projectModal"
+                            data-title="Template pack" data-label="Digital products" data-img="2.jpg" data-alt="Template pack project preview"
+                            data-desc="A set of editable, ready-to-use templates that give creators a professional starting point." data-tags="Editable templates, Instructions, Ready-to-use files">
+                            <div class="work-thumb">
+                                <img src="2.jpg" alt="Template pack project preview" loading="lazy">
+                                <span class="work-view"><i class="bi bi-arrows-angle-expand"></i> View project</span>
+                            </div>
+                            <div class="work-info">
+                                <h3>Template pack</h3><span>Digital products</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="pf-empty" id="pfEmpty" hidden>
+                    <p class="mb-2">No projects in this category yet.</p>
+                    <a href="contact.html">Start the first one</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA BAND ===== -->
+        <section class="section section-alt">
+            <div class="container-xl">
+                <div class="cta-band" data-reveal>
+                    <h2>Like what you see?</h2>
+                    <p>Tell us about your project and we will get back to you with a plan.</p>
+                    <a class="btn btn-fill" href="contact.html">Start a project</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container-xl">
+            <div class="row g-5 footer-main">
+                <div class="col-lg-4" data-reveal>
+                    <a href="index.html" class="footer-logo"><img src="5.png" alt="SZKAY Design Agency"></a>
+                    <p class="footer-about">A design agency building brands, websites and digital assets that help
+                        businesses stand out.</p>
+                    <div class="socials"><a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a><a href="#"
+                            aria-label="X"><i class="bi bi-twitter-x"></i></a><a href="#" aria-label="Telegram"><i
+                                class="bi bi-telegram"></i></a><a href="#" aria-label="Instagram"><i
+                                class="bi bi-instagram"></i></a><a href="#" aria-label="LinkedIn"><i
+                                class="bi bi-linkedin"></i></a><a href="#" aria-label="Behance"><i
+                                class="bi bi-behance"></i></a></div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-reveal style="--d:.1s">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Start a project</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-reveal style="--d:.2s">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#website-development">Website development</a></li>
+                        <li><a href="services.html#brand-identity">Brand identity design</a></li>
+                        <li><a href="services.html#flyer-designs">Flyer designs</a></li>
+                        <li><a href="services.html#mentorship">Mentorship</a></li>
+                        <li><a href="services.html#digital-products">Digital products</a></li>
+                        <li><a href="services.html#social-media-design">Social media design</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3" data-reveal style="--d:.3s">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></li>
+                        <li><a href="#">WhatsApp <i class="bi bi-arrow-up-right"></i></a></li>
+                        <li><a href="#">Instagram <i class="bi bi-arrow-up-right"></i></a></li>
+                        <li><a href="#">Behance <i class="bi bi-arrow-up-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; <span id="year"></span> Szkay Design Agency. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    
+    <button class="to-top" id="toTop" type="button" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+    <!-- ===== PROJECT POP-UP ===== -->
+    <div class="modal fade pf-modal" id="projectModal" tabindex="-1" aria-labelledby="projectModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <button type="button" class="pf-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+                <div class="pf-modal-grid">
+                    <div class="pf-media"><img id="pfImg" src="" alt=""></div>
+                    <div class="pf-info">
+                        <p class="pf-kicker" id="pfKicker"></p>
+                        <h2 id="projectModalTitle"></h2>
+                        <p class="pf-desc" id="pfDesc"></p>
+                        <ul class="hero-tags" id="pfTags"></ul>
+                        <a class="btn btn-fill" href="contact.html">Start a similar project</a>
+                        <div class="pf-foot">
+                            <span class="pf-counter" id="pfCounter" aria-live="polite"></span>
+                            <button type="button" class="pf-nav-btn" id="pfPrev" aria-label="Previous project"><i class="bi bi-arrow-left"></i></button>
+                            <button type="button" class="pf-nav-btn" id="pfNext" aria-label="Next project"><i class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- Shared site JS, then this page's JS -->
+    <script src="index.js"></script>
+    <script src="portfolio.js"></script>
+
+</body>
+
+</html>

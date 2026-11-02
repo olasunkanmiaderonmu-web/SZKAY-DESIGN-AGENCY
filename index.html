@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Szkay Design Agency</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons (used in the footer) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg site-nav" aria-label="Main navigation">
+            <div class="container-fluid px-3 px-lg-4">
+
+                <!-- Logo (left) -->
+                <a class="navbar-brand site-logo" href="index.html">
+                    <img src="icon.png" alt="SZKAY Design Agency" class="logo-img">
+                </a>
+
+                <!-- Thin divider between logo and links (desktop only) -->
+                <span class="logo-divider d-none d-lg-block" aria-hidden="true"></span>
+
+                <!-- Mobile toggler -->
+                <button class="navbar-toggler site-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="toggler-bar"></span>
+                    <span class="toggler-bar"></span>
+                    <span class="toggler-bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+
+                    <!-- Links (next to the logo) -->
+                    <ul class="navbar-nav site-links">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+
+                        <!-- Services mega dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="services.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                            <div class="dropdown-menu mega-menu">
+                                <div class="mega-grid">
+                                    <a class="mega-item" href="services.html#website-development" style="--i:0">
+                                        <span class="mega-icon"><i class="bi bi-code-slash"></i></span>
+                                        <span class="mega-text"><strong>Website development</strong><small>Fast,
+                                                responsive websites built to convert</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#brand-identity" style="--i:1">
+                                        <span class="mega-icon"><i class="bi bi-vector-pen"></i></span>
+                                        <span class="mega-text"><strong>Brand identity design</strong><small>Logos,
+                                                colours and brand guidelines</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#flyer-designs" style="--i:2">
+                                        <span class="mega-icon"><i class="bi bi-card-image"></i></span>
+                                        <span class="mega-text"><strong>Flyer designs</strong><small>Print and digital
+                                                flyers that get noticed</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#mentorship" style="--i:3">
+                                        <span class="mega-icon"><i class="bi bi-mortarboard"></i></span>
+                                        <span class="mega-text"><strong>Mentorship</strong><small>One-on-one guidance in
+                                                design and code</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#digital-products" style="--i:4">
+                                        <span class="mega-icon"><i class="bi bi-box-seam"></i></span>
+                                        <span class="mega-text"><strong>Digital products</strong><small>Templates, kits
+                                                and ready-to-use assets</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#social-media-design" style="--i:5">
+                                        <span class="mega-icon"><i class="bi bi-megaphone"></i></span>
+                                        <span class="mega-text"><strong>Social media design</strong><small>Posts,
+                                                banners and campaign graphics</small></span>
+                                    </a>
+                                </div>
+                                <div class="mega-foot"><a href="services.html">View all services <i
+                                            class="bi bi-arrow-right"></i></a></div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <!-- Actions (right) -->
+                    <div class="nav-actions ms-lg-auto">
+                        <a class="btn nav-cta" href="contact.html">Start a project</a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Scroll progress line -->
+        <div class="scroll-progress" aria-hidden="true"></div>
+    </header>
+
+    <main>
+
+        <!-- ===== HERO ===== -->
+        <section class="hero">
+            <div class="container-xl">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <h1 class="hero-title" data-reveal style="--d:.1s">We design brands and build websites that win
+                            clients.</h1>
+                        <p class="lead-text" data-reveal style="--d:.2s">We helps businesses stand out with website
+                            development, brand identity design, flyers and digital assets, all made to look sharp and
+                            work hard.</p>
+                        <div class="hero-actions" data-reveal style="--d:.3s">
+                            <a class="btn btn-fill" href="contact.html">Start a project</a>
+                            <a class="btn btn-ghost" href="portfolio.html">View our work</a>
+                        </div>
+                        <!--   <ul class="hero-tags" data-reveal style="--d:.4s">
+          <li>Websites</li><li>Brand identity</li><li>Flyers</li><li>Digital assets</li>
+        </ul> -->
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="media-wrap" data-reveal style="--d:.2s">
+                            <div class="stage-glow" aria-hidden="true"></div>
+                            <div class="ring ring-1" aria-hidden="true"></div>
+                            <div class="ring ring-2" aria-hidden="true"><span class="orbit-dot"
+                                    style="--a:-90deg"></span><span class="orbit-dot" style="--a:30deg"></span><span
+                                    class="orbit-dot" style="--a:150deg"></span></div>
+                            <!-- The logo icon is cut into tiles by index.js and assembled here (uses the same icon.png as the navbar). Click or hover it to replay. -->
+                            <div class="logo-stage" id="logoStage" role="img"
+                                aria-label="SZKAY logo icon assembling piece by piece"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== MARQUEE ===== -->
+        <section class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <div class="m-card"><img class="m-logo" src="photoshop.svg" alt="Photoshop" width="46"
+                        height="46"><span class="m-name">Photoshop</span></div>
+                <div class="m-card"><img class="m-logo" src="illustrator.svg" alt="Illustrator" width="46"
+                        height="46"><span class="m-name">Illustrator</span></div>
+                <div class="m-card"><img class="m-logo" src="html5.svg" alt="HTML" width="46"
+                        height="46"><span class="m-name">HTML</span></div>
+                <div class="m-card"><img class="m-logo" src="css3.svg" alt="CSS" width="46"
+                        height="46"><span class="m-name">CSS</span></div>
+                <div class="m-card"><img class="m-logo" src="javascript.svg" alt="JavaScript" width="46"
+                        height="46"><span class="m-name">JavaScript</span></div>
+                <div class="m-card"><img class="m-logo" src="bootstrap.svg" alt="Bootstrap" width="46"
+                        height="46"><span class="m-name">Bootstrap</span></div>
+                <div class="m-card"><img class="m-logo mono" src="github.svg" alt="GitHub" width="46"
+                        height="46"><span class="m-name">GitHub</span></div>
+                <div class="m-card"><img class="m-logo" src="firebase.svg" alt="Firebase" width="46"
+                        height="46"><span class="m-name">Firebase</span></div>
+                <div class="m-card"><img class="m-logo" src="cloudflare.svg" alt="Cloudflare" width="46"
+                        height="46"><span class="m-name">Cloudflare</span></div>
+                <div class="m-card"><img class="m-logo" src="photoshop.svg" alt="Photoshop" width="46"
+                        height="46"><span class="m-name">Photoshop</span></div>
+                <div class="m-card"><img class="m-logo" src="illustrator.svg" alt="Illustrator" width="46"
+                        height="46"><span class="m-name">Illustrator</span></div>
+                <div class="m-card"><img class="m-logo" src="html5.svg" alt="HTML" width="46"
+                        height="46"><span class="m-name">HTML</span></div>
+                <div class="m-card"><img class="m-logo" src="css3.svg" alt="CSS" width="46"
+                        height="46"><span class="m-name">CSS</span></div>
+                <div class="m-card"><img class="m-logo" src="javascript.svg" alt="JavaScript" width="46"
+                        height="46"><span class="m-name">JavaScript</span></div>
+                <div class="m-card"><img class="m-logo" src="bootstrap.svg" alt="Bootstrap" width="46"
+                        height="46"><span class="m-name">Bootstrap</span></div>
+                <div class="m-card"><img class="m-logo mono" src="github.svg" alt="GitHub" width="46"
+                        height="46"><span class="m-name">GitHub</span></div>
+                <div class="m-card"><img class="m-logo" src="firebase.svg" alt="Firebase" width="46"
+                        height="46"><span class="m-name">Firebase</span></div>
+                <div class="m-card"><img class="m-logo" src="cloudflare.svg" alt="Cloudflare" width="46"
+                        height="46"><span class="m-name">Cloudflare</span></div>
+                <div class="m-card"><img class="m-logo" src="photoshop.svg" alt="Photoshop" width="46"
+                        height="46"><span class="m-name">Photoshop</span></div>
+                <div class="m-card"><img class="m-logo" src="illustrator.svg" alt="Illustrator" width="46"
+                        height="46"><span class="m-name">Illustrator</span></div>
+                <div class="m-card"><img class="m-logo" src="html5.svg" alt="HTML" width="46"
+                        height="46"><span class="m-name">HTML</span></div>
+                <div class="m-card"><img class="m-logo" src="css3.svg" alt="CSS" width="46"
+                        height="46"><span class="m-name">CSS</span></div>
+                <div class="m-card"><img class="m-logo" src="javascript.svg" alt="JavaScript" width="46"
+                        height="46"><span class="m-name">JavaScript</span></div>
+                <div class="m-card"><img class="m-logo" src="bootstrap.svg" alt="Bootstrap" width="46"
+                        height="46"><span class="m-name">Bootstrap</span></div>
+                <div class="m-card"><img class="m-logo mono" src="github.svg" alt="GitHub" width="46"
+                        height="46"><span class="m-name">GitHub</span></div>
+                <div class="m-card"><img class="m-logo" src="firebase.svg" alt="Firebase" width="46"
+                        height="46"><span class="m-name">Firebase</span></div>
+                <div class="m-card"><img class="m-logo" src="cloudflare.svg" alt="Cloudflare" width="46"
+                        height="46"><span class="m-name">Cloudflare</span></div>
+            </div>
+        </section> 
+
+        <!-- ===== SERVICES ===== -->
+        <section class="section section-alt" id="services">
+            <div class="container-xl">
+                <div class="section-head d-flex flex-wrap justify-content-between align-items-end gap-3" data-reveal>
+                    <div style="max-width:640px">
+                        <h2 class="mb-0">Everything your brand needs to look and work its best</h2>
+                    </div>
+                    <a class="btn btn-ghost" href="services.html">View all services</a>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3" data-reveal style="--d:0s">
+                        <a class="d-block h-100 text-decoration-none text-reset" href="services.html#website-development">
+                        <article class="card-x">
+                            <span class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="16 18 22 12 16 6" />
+                                    <polyline points="8 6 2 12 8 18" />
+                                </svg></span>
+                            <h3>Website development</h3>
+                            <p>Fast, responsive websites built to turn visitors into customers.</p>
+                        </article>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-reveal style="--d:.1s">
+                        <a class="d-block h-100 text-decoration-none text-reset" href="services.html#brand-identity">
+                        <article class="card-x">
+                            <span class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M12 2 2 7l10 5 10-5-10-5z" />
+                                    <path d="m2 17 10 5 10-5" />
+                                    <path d="m2 12 10 5 10-5" />
+                                </svg></span>
+                            <h3>Brand identity design</h3>
+                            <p>Logos, colours and guidelines that make your business instantly recognisable.</p>
+                        </article>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-reveal style="--d:.2s">
+                        <a class="d-block h-100 text-decoration-none text-reset" href="services.html#flyer-designs">
+                        <article class="card-x">
+                            <span class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" />
+                                    <path d="M14 3v6h6" />
+                                    <path d="M8 13h8M8 17h5" />
+                                </svg></span>
+                            <h3>Flyers and print</h3>
+                            <p>Eye-catching flyers and print designs that get noticed and remembered.</p>
+                        </article>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-reveal style="--d:.3s">
+                        <a class="d-block h-100 text-decoration-none text-reset" href="services.html#social-media-design">
+                        <article class="card-x">
+                            <span class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="3" y="3" width="7" height="7" rx="1" />
+                                    <rect x="14" y="3" width="7" height="7" rx="1" />
+                                    <rect x="3" y="14" width="7" height="7" rx="1" />
+                                    <rect x="14" y="14" width="7" height="7" rx="1" />
+                                </svg></span>
+                            <h3>Digital assets</h3>
+                            <p>Social media graphics, banners and other assets that keep your brand consistent.</p>
+                        </article>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROCESS ===== -->
+        <section class="section" id="process">
+            <div class="container-xl">
+                <div class="section-head d-flex flex-wrap justify-content-between align-items-end gap-3" data-reveal>
+                    <div style="max-width:640px">
+                        <h2 class="mb-0">A simple process from first call to launch</h2>
+                    </div>
+                    <a class="btn btn-ghost" href="about.html">More about us</a>
+                </div>
+                <div class="row g-4 steps">
+                    <div class="col-md-6 col-lg-3" data-reveal style="--d:0s">
+                        <div class="step"><span class="step-no">1</span>
+                            <h3>Discover</h3>
+                            <p>We learn about your business, audience and goals.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-reveal style="--d:.1s">
+                        <div class="step"><span class="step-no">2</span>
+                            <h3>Design</h3>
+                            <p>We shape concepts and refine them with your feedback.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-reveal style="--d:.2s">
+                        <div class="step"><span class="step-no">3</span>
+                            <h3>Build</h3>
+                            <p>We turn the approved design into a finished, working product.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-reveal style="--d:.3s">
+                        <div class="step"><span class="step-no">4</span>
+                            <h3>Launch</h3>
+                            <p>We test, publish and hand over everything you need.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PORTFOLIO PREVIEW ===== -->
+        <section class="section section-alt" id="portfolio">
+            <div class="container-xl">
+                <div class="section-head d-flex flex-wrap justify-content-between align-items-end gap-3" data-reveal>
+                    <div>
+                        <h2 class="mb-0">Projects we are proud of</h2>
+                    </div>
+                    <a class="btn btn-ghost" href="portfolio.html">See all projects</a>
+                </div>
+                <div class="row g-4">
+                    <!-- Replace each .work-thumb contents with <img src="project.jpg" alt="..."> -->
+                    <div class="col-md-4" data-reveal style="--d:0s"><a class="work" href="portfolio.html?category=websites">
+                            <div class="work-thumb"><img src="3.jpg" alt="Website development project preview"></div>
+                            <div class="work-info">
+                                <h3>Project name</h3><span>Website development</span>
+                            </div>
+                        </a></div>
+                    <div class="col-md-4" data-reveal style="--d:.1s"><a class="work" href="portfolio.html?category=brand-identity">
+                            <div class="work-thumb"><img src="2.jpg" alt="Brand identity project preview"></div>
+                            <div class="work-info">
+                                <h3>Project name</h3><span>Brand identity</span>
+                            </div>
+                        </a></div>
+                    <div class="col-md-4" data-reveal style="--d:.2s"><a class="work" href="portfolio.html?category=flyers">
+                            <div class="work-thumb"><img src="1.jpg" alt="Flyer design project preview"></div>
+                            <div class="work-info">
+                                <h3>Project name</h3><span>Flyers and print</span>
+                            </div>
+                        </a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA BAND ===== -->
+        <section class="section">
+            <div class="container-xl">
+                <div class="cta-band" data-reveal>
+                    <h2>Ready to start your project?</h2>
+                    <p>Tell us what you need and we will get back to you with a plan.</p>
+                    <a class="btn btn-fill" href="contact.html">Start a project</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container-xl">
+            <div class="row g-5 footer-main">
+                <div class="col-lg-4" data-reveal>
+                    <a href="index.html" class="footer-logo"><img src="5.png" alt="SZKAY Design Agency"></a>
+                    <p class="footer-about">A design agency building brands, websites and digital assets that help
+                        businesses stand out.</p>
+                    <div class="socials"><a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a><a href="#"
+                            aria-label="X"><i class="bi bi-twitter-x"></i></a><a href="#" aria-label="Telegram"><i
+                                class="bi bi-telegram"></i></a><a href="#" aria-label="Instagram"><i
+                                class="bi bi-instagram"></i></a><a href="#" aria-label="LinkedIn"><i
+                                class="bi bi-linkedin"></i></a><a href="#" aria-label="Behance"><i
+                                class="bi bi-behance"></i></a></div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-reveal style="--d:.1s">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Start a project</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-reveal style="--d:.2s">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#website-development">Website development</a></li>
+                        <li><a href="services.html#brand-identity">Brand identity design</a></li>
+                        <li><a href="services.html#flyer-designs">Flyer designs</a></li>
+                        <li><a href="services.html#mentorship">Mentorship</a></li>
+                        <li><a href="services.html#digital-products">Digital products</a></li>
+                        <li><a href="services.html#social-media-design">Social media design</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3" data-reveal style="--d:.3s">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></li>
+                        <li><a href="#">WhatsApp <i class="bi bi-arrow-up-right"></i></a></li>
+                        <li><a href="#">Instagram <i class="bi bi-arrow-up-right"></i></a></li>
+                        <li><a href="#">Behance <i class="bi bi-arrow-up-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; <span id="year"></span> Szkay Design Agency. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <button class="to-top" id="toTop" type="button" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- Your custom JS -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,434 @@
+/* =====================================================
+   PORTFOLIO PAGE  (loads AFTER index.css)
+   Reuses from index.css: brand tokens, .section, .work / .work-thumb /
+   .work-info, .cta-band, .btn-fill, .btn-ghost, .hero-tags, [data-reveal]
+   ===================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== Page hero ===== */
+.page-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 4.5rem 0 1rem;
+}
+
+.page-hero::before {
+    content: "";
+    position: absolute;
+    width: 560px;
+    height: 560px;
+    right: -160px;
+    top: -200px;
+    background: radial-gradient(circle, rgba(255, 103, 0, 0.2), transparent 65%);
+    animation: glow 8s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+.page-hero .container-xl {
+    position: relative;
+}
+
+.page-hero .hero-title {
+    max-width: 820px;
+}
+
+.page-hero .lead-text {
+    max-width: 600px;
+}
+
+.page-hero .hero-actions {
+    margin-bottom: 0;
+}
+
+.crumbs {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.crumbs a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.crumbs a:hover {
+    color: var(--brand-orange);
+}
+
+.crumbs [aria-current] {
+    color: var(--brand-white);
+}
+
+/* ===== Sticky filter bar ===== */
+.pf-bar {
+    position: sticky;
+    top: calc(var(--nav-height-scrolled) - 1px);
+    z-index: 1020;
+    background: rgba(51, 51, 51, 0.92);
+    -webkit-backdrop-filter: saturate(160%) blur(12px);
+    backdrop-filter: saturate(160%) blur(12px);
+    border-block: 1px solid var(--line);
+}
+
+.pf-filters {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0.65rem 0;
+    list-style: none;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.pf-filters::-webkit-scrollbar {
+    display: none;
+}
+
+.pf-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    white-space: nowrap;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: transparent;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.pf-chip:hover,
+.pf-chip:focus-visible {
+    color: var(--brand-white);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+.pf-chip:focus-visible {
+    outline: 2px solid var(--brand-orange);
+    outline-offset: 2px;
+}
+
+.pf-chip.is-active {
+    background: var(--brand-orange);
+    border-color: var(--brand-orange);
+    color: var(--brand-dark);
+}
+
+.pf-count {
+    min-width: 1.4rem;
+    padding: 0.05rem 0.4rem;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 0.72rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.pf-chip.is-active .pf-count {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Project grid ===== */
+.pf-section {
+    padding-top: 3.5rem;
+}
+
+/* Filtering: cards that don't match shrink and fade out, the rest glide into place */
+.js .pf-item {
+    transition: opacity 0.4s ease var(--d, 0s), transform 0.5s cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0s);
+}
+
+.js .pf-item.is-out {
+    opacity: 0 !important;
+    transform: scale(0.94) !important;
+    pointer-events: none;
+}
+
+.pf-card {
+    cursor: pointer;
+}
+
+.pf-card:focus-visible {
+    outline: 2px solid var(--brand-orange);
+    outline-offset: 6px;
+    border-radius: 12px;
+}
+
+/* Hover: dark gradient + "View project" pill on top of the image */
+.pf-card .work-thumb {
+    position: relative;
+}
+
+.pf-card .work-thumb::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.pf-card:hover .work-thumb::after,
+.pf-card:focus-visible .work-thumb::after {
+    opacity: 1;
+}
+
+.work-view {
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    background: var(--brand-white);
+    color: var(--brand-dark);
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    opacity: 0;
+    translate: -50% 12px;
+    transition: opacity 0.35s ease, translate 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pf-card:hover .work-view,
+.pf-card:focus-visible .work-view {
+    opacity: 1;
+    translate: -50% 0;
+}
+
+/* Touch screens have no hover: keep the pill visible */
+@media (hover: none) {
+    .work-view {
+        opacity: 1;
+        translate: -50% 0;
+    }
+}
+
+.pf-empty {
+    max-width: 440px;
+    margin: 1rem auto 0;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    color: var(--text-muted);
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+}
+
+.pf-empty[hidden] {
+    display: none;
+}
+
+.pf-empty a {
+    color: var(--brand-orange);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.pf-empty a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Project modal ===== */
+.pf-modal .modal-content {
+    position: relative;
+    overflow: hidden;
+    color: var(--brand-white);
+    background: #2d2d2d;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.8);
+}
+
+.pf-modal-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+}
+
+.pf-media {
+    position: relative;
+    min-height: 360px;
+    background: #222;
+}
+
+.pf-media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pf-media.is-swapping img {
+    opacity: 0;
+    transform: scale(1.04);
+}
+
+.pf-info {
+    display: flex;
+    flex-direction: column;
+    padding: 2.25rem;
+}
+
+.pf-kicker {
+    margin-bottom: 0.7rem;
+    color: var(--brand-orange);
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.pf-info h2 {
+    margin-bottom: 1rem;
+    font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+    line-height: 1.15;
+}
+
+.pf-desc {
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.pf-info .hero-tags {
+    margin-bottom: 2rem;
+}
+
+.pf-info .btn-fill {
+    align-self: flex-start;
+}
+
+.pf-foot {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: auto;
+    padding-top: 2rem;
+}
+
+.pf-counter {
+    margin-right: auto;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.85rem;
+}
+
+.pf-nav-btn {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--brand-white);
+    transition: border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.pf-nav-btn:hover,
+.pf-nav-btn:focus-visible {
+    border-color: var(--brand-orange);
+    background: var(--brand-orange);
+    color: var(--brand-dark);
+    transform: translateY(-2px);
+}
+
+.pf-nav-btn:focus-visible {
+    outline: 2px solid var(--brand-white);
+    outline-offset: 2px;
+}
+
+.pf-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--brand-white);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.3s ease;
+}
+
+.pf-close:hover,
+.pf-close:focus-visible {
+    background: var(--brand-orange);
+    color: var(--brand-dark);
+    transform: rotate(90deg);
+}
+
+.modal-backdrop.show {
+    --bs-backdrop-opacity: 0.8;
+}
+
+/* ===== Small screens ===== */
+@media (max-width: 991.98px) {
+    .page-hero {
+        padding: 3rem 0 3rem;
+    }
+
+    .pf-section {
+        padding-top: 2.5rem;
+    }
+
+    .pf-modal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pf-media {
+        min-height: 0;
+        aspect-ratio: 4 / 3;
+    }
+
+    .pf-info {
+        padding: 1.5rem;
+    }
+}
+
+/* ===== Reduced motion ===== */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .page-hero::before {
+        animation: none !important;
+    }
+
+    .js .pf-item.is-out {
+        transform: none !important;
+    }
+
+    .pf-media img,
+    .pf-media.is-swapping img {
+        transform: none;
+    }
+}
+
+/* the hidden attribute must win over display:grid / display:flex above */
+.pf-nav-btn[hidden],
+.pf-counter[hidden] {
+    display: none;
+}

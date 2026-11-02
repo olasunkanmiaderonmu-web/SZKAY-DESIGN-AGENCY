@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Services | Szkay Design Agency</title>
+    <meta name="description"
+        content="Website development, brand identity design, flyer designs, mentorship, digital products and social media design from Szkay Design Agency.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Shared site CSS, then this page's CSS -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="services.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg site-nav" aria-label="Main navigation">
+            <div class="container-fluid px-3 px-lg-4">
+
+                <!-- Logo (left) -->
+                <a class="navbar-brand site-logo" href="index.html">
+                    <img src="icon.png" alt="SZKAY Design Agency" class="logo-img">
+                </a>
+
+                <!-- Thin divider between logo and links (desktop only) -->
+                <span class="logo-divider d-none d-lg-block" aria-hidden="true"></span>
+
+                <!-- Mobile toggler -->
+                <button class="navbar-toggler site-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="toggler-bar"></span>
+                    <span class="toggler-bar"></span>
+                    <span class="toggler-bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+
+                    <!-- Links (next to the logo) -->
+                    <ul class="navbar-nav site-links">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a>
+                        </li>
+
+                        <!-- Services mega dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" aria-current="page" href="services.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                            <div class="dropdown-menu mega-menu">
+                                <div class="mega-grid">
+                                    <a class="mega-item" href="services.html#website-development" style="--i:0">
+                                        <span class="mega-icon"><i class="bi bi-code-slash"></i></span>
+                                        <span class="mega-text"><strong>Website development</strong><small>Fast,
+                                                responsive websites built to convert</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#brand-identity" style="--i:1">
+                                        <span class="mega-icon"><i class="bi bi-vector-pen"></i></span>
+                                        <span class="mega-text"><strong>Brand identity design</strong><small>Logos,
+                                                colours and brand guidelines</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#flyer-designs" style="--i:2">
+                                        <span class="mega-icon"><i class="bi bi-card-image"></i></span>
+                                        <span class="mega-text"><strong>Flyer designs</strong><small>Print and digital
+                                                flyers that get noticed</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#mentorship" style="--i:3">
+                                        <span class="mega-icon"><i class="bi bi-mortarboard"></i></span>
+                                        <span class="mega-text"><strong>Mentorship</strong><small>One-on-one guidance in
+                                                design and code</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#digital-products" style="--i:4">
+                                        <span class="mega-icon"><i class="bi bi-box-seam"></i></span>
+                                        <span class="mega-text"><strong>Digital products</strong><small>Templates, kits
+                                                and ready-to-use assets</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#social-media-design" style="--i:5">
+                                        <span class="mega-icon"><i class="bi bi-megaphone"></i></span>
+                                        <span class="mega-text"><strong>Social media design</strong><small>Posts,
+                                                banners and campaign graphics</small></span>
+                                    </a>
+                                </div>
+                                <div class="mega-foot"><a href="services.html">View all services <i
+                                            class="bi bi-arrow-right"></i></a></div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <!-- Actions (right) -->
+                    <div class="nav-actions ms-lg-auto">
+                        <a class="btn nav-cta" href="contact.html">Start a project</a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Scroll progress line -->
+        <div class="scroll-progress" aria-hidden="true"></div>
+    </header>
+
+    <main>
+
+        <!-- ===== PAGE HERO ===== -->
+        <section class="page-hero">
+            <div class="container-xl">
+                <nav class="crumbs" aria-label="Breadcrumb" data-reveal>
+                    <a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Services</span>
+                </nav>
+                <h1 class="hero-title">Design and development services built to help your brand grow.</h1>
+                <p class="lead-text" data-reveal style="--d:.2s">From websites and brand identities to flyers, social media
+                    graphics and one-on-one mentorship, everything we do is made to look sharp and work hard for your
+                    business.</p>
+            </div>
+        </section>
+
+        <!-- ===== JUMP BAR ===== -->
+        <div class="svc-jump" aria-label="Jump to a service">
+            <div class="container-xl">
+                <ul class="svc-jump-list">
+                    <li><a class="svc-chip" href="#website-development">Website development</a></li>
+                    <li><a class="svc-chip" href="#brand-identity">Brand identity design</a></li>
+                    <li><a class="svc-chip" href="#flyer-designs">Flyer designs</a></li>
+                    <li><a class="svc-chip" href="#mentorship">Mentorship</a></li>
+                    <li><a class="svc-chip" href="#digital-products">Digital products</a></li>
+                    <li><a class="svc-chip" href="#social-media-design">Social media design</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ===== WEBSITE DEVELOPMENT ===== -->
+        <section class="section svc" id="website-development" data-spy>
+            <div class="container-xl">
+                <div class="row g-5 align-items-center svc-row">
+                    <div class="col-lg-6" data-reveal>
+                        <span class="svc-no" aria-hidden="true">01</span>
+                        <p class="kicker">Website development</p>
+                        <h2>Fast, responsive websites built to turn visitors into customers</h2>
+                        <p class="svc-desc">We design and build websites that look sharp on every screen, load quickly and make it easy for people to contact you. From a single landing page to a full business website, we take care of design, build and launch.</p>
+                        <ul class="hero-tags"><li>Business websites</li><li>Landing pages</li><li>Portfolio sites</li></ul>
+                        <div class="svc-actions">
+                            <a class="btn btn-fill" href="contact.html">Start a project</a>
+                            <a class="btn btn-ghost" href="portfolio.html">View our work</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-reveal style="--d:.15s">
+                        <article class="card-x svc-panel">
+                            <div class="svc-panel-head">
+                                <span class="svc-panel-icon"><i class="bi bi-code-slash"></i></span>
+                                <h3>What's included</h3>
+                            </div>
+                            <ul class="svc-list">
+                            <li>Custom, mobile-first design</li>
+                            <li>Clean HTML, CSS and JavaScript built with Bootstrap</li>
+                            <li>Contact forms and WhatsApp links</li>
+                            <li>Fast loading and basic on-page SEO</li>
+                            <li>Testing on phones, tablets and desktops</li>
+                            <li>Launch support and handover</li>
+                            </ul>
+                            <div class="svc-meta">
+                                <div><span>Best for</span><strong>Businesses and creators who need a professional online presence</strong></div>
+                                <div><span>Delivered as</span><strong>A live, tested website</strong></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== BRAND IDENTITY DESIGN ===== -->
+        <section class="section svc section-alt" id="brand-identity" data-spy>
+            <div class="container-xl">
+                <div class="row g-5 align-items-center svc-row flex-lg-row-reverse">
+                    <div class="col-lg-6" data-reveal>
+                        <span class="svc-no" aria-hidden="true">02</span>
+                        <p class="kicker">Brand identity design</p>
+                        <h2>Logos, colours and guidelines that make your business instantly recognisable</h2>
+                        <p class="svc-desc">Your brand is more than a logo. We create a complete visual identity so your business looks consistent and professional everywhere customers find you.</p>
+                        <ul class="hero-tags"><li>Logo design</li><li>Colour palette</li><li>Typography</li></ul>
+                        <div class="svc-actions">
+                            <a class="btn btn-fill" href="contact.html">Start a project</a>
+                            <a class="btn btn-ghost" href="portfolio.html">View our work</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-reveal style="--d:.15s">
+                        <article class="card-x svc-panel">
+                            <div class="svc-panel-head">
+                                <span class="svc-panel-icon"><i class="bi bi-vector-pen"></i></span>
+                                <h3>What's included</h3>
+                            </div>
+                            <ul class="svc-list">
+                            <li>Logo concepts and refinements</li>
+                            <li>Colour palette and font selection</li>
+                            <li>Brand guidelines document</li>
+                            <li>Logo files for print and screen</li>
+                            <li>Business card and stationery layouts</li>
+                            </ul>
+                            <div class="svc-meta">
+                                <div><span>Best for</span><strong>New businesses and brands ready for a fresh look</strong></div>
+                                <div><span>Delivered as</span><strong>Logo files and a brand guide</strong></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== FLYER DESIGNS ===== -->
+        <section class="section svc" id="flyer-designs" data-spy>
+            <div class="container-xl">
+                <div class="row g-5 align-items-center svc-row">
+                    <div class="col-lg-6" data-reveal>
+                        <span class="svc-no" aria-hidden="true">03</span>
+                        <p class="kicker">Flyer designs</p>
+                        <h2>Print and digital flyers that get noticed and remembered</h2>
+                        <p class="svc-desc">A good flyer says the right thing in a few seconds. We design flyers with strong layouts and a clear call to action, ready for print or for sharing online.</p>
+                        <ul class="hero-tags"><li>Event flyers</li><li>Promotions</li><li>Announcements</li></ul>
+                        <div class="svc-actions">
+                            <a class="btn btn-fill" href="contact.html">Start a project</a>
+                            <a class="btn btn-ghost" href="portfolio.html">View our work</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-reveal style="--d:.15s">
+                        <article class="card-x svc-panel">
+                            <div class="svc-panel-head">
+                                <span class="svc-panel-icon"><i class="bi bi-card-image"></i></span>
+                                <h3>What's included</h3>
+                            </div>
+                            <ul class="svc-list">
+                            <li>Custom layout and artwork</li>
+                            <li>Clear message and call to action</li>
+                            <li>Print-ready files at the correct size</li>
+                            <li>Digital versions for WhatsApp and social media</li>
+                            <li>Editable source files on request</li>
+                            </ul>
+                            <div class="svc-meta">
+                                <div><span>Best for</span><strong>Events, promotions, product launches and announcements</strong></div>
+                                <div><span>Delivered as</span><strong>Print-ready PDF and web-ready images</strong></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== MENTORSHIP ===== -->
+        <section class="section svc section-alt" id="mentorship" data-spy>
+            <div class="container-xl">
+                <div class="row g-5 align-items-center svc-row flex-lg-row-reverse">
+                    <div class="col-lg-6" data-reveal>
+                        <span class="svc-no" aria-hidden="true">04</span>
+                        <p class="kicker">Mentorship</p>
+                        <h2>One-on-one guidance in design and code</h2>
+                        <p class="svc-desc">Learning design or web development on your own can be slow and confusing. We work with you one-on-one, review your work and help you build the skills and the portfolio to move forward.</p>
+                        <ul class="hero-tags"><li>Web development</li><li>Graphic design</li><li>Portfolio building</li></ul>
+                        <div class="svc-actions">
+                            <a class="btn btn-fill" href="contact.html">Start a project</a>
+                            <a class="btn btn-ghost" href="contact.html">Ask a question</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-reveal style="--d:.15s">
+                        <article class="card-x svc-panel">
+                            <div class="svc-panel-head">
+                                <span class="svc-panel-icon"><i class="bi bi-mortarboard"></i></span>
+                                <h3>What's included</h3>
+                            </div>
+                            <ul class="svc-list">
+                            <li>A learning plan built around your goals</li>
+                            <li>Live one-on-one sessions</li>
+                            <li>Project and portfolio reviews</li>
+                            <li>Practical feedback on your design and code</li>
+                            <li>Guidance on tools, workflow and finding clients</li>
+                            </ul>
+                            <div class="svc-meta">
+                                <div><span>Best for</span><strong>Beginners and self-taught designers and developers</strong></div>
+                                <div><span>Delivered as</span><strong>Sessions and feedback tailored to you</strong></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== DIGITAL PRODUCTS ===== -->
+        <section class="section svc" id="digital-products" data-spy>
+            <div class="container-xl">
+                <div class="row g-5 align-items-center svc-row">
+                    <div class="col-lg-6" data-reveal>
+                        <span class="svc-no" aria-hidden="true">05</span>
+                        <p class="kicker">Digital products</p>
+                        <h2>Templates, kits and ready-to-use assets</h2>
+                        <p class="svc-desc">Skip the blank page. Our digital products give you professionally designed files you can customise and start using straight away.</p>
+                        <ul class="hero-tags"><li>Design templates</li><li>Website templates</li><li>Asset packs</li></ul>
+                        <div class="svc-actions">
+                            <a class="btn btn-fill" href="contact.html">Start a project</a>
+                            <a class="btn btn-ghost" href="contact.html">Ask a question</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-reveal style="--d:.15s">
+                        <article class="card-x svc-panel">
+                            <div class="svc-panel-head">
+                                <span class="svc-panel-icon"><i class="bi bi-box-seam"></i></span>
+                                <h3>What's included</h3>
+                            </div>
+                            <ul class="svc-list">
+                            <li>Editable design templates</li>
+                            <li>Website starter templates</li>
+                            <li>Graphic, icon and mockup packs</li>
+                            <li>Simple instructions for using each file</li>
+                            <li>Made to match professional standards</li>
+                            </ul>
+                            <div class="svc-meta">
+                                <div><span>Best for</span><strong>Creators and small businesses who want quality design fast</strong></div>
+                                <div><span>Delivered as</span><strong>Ready-to-use files</strong></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== SOCIAL MEDIA DESIGN ===== -->
+        <section class="section svc section-alt" id="social-media-design" data-spy>
+            <div class="container-xl">
+                <div class="row g-5 align-items-center svc-row flex-lg-row-reverse">
+                    <div class="col-lg-6" data-reveal>
+                        <span class="svc-no" aria-hidden="true">06</span>
+                        <p class="kicker">Social media design</p>
+                        <h2>Posts, banners and campaign graphics that keep your brand consistent</h2>
+                        <p class="svc-desc">Your social media is often the first place customers meet your brand. We design graphics that look polished, match your identity and stop people from scrolling past.</p>
+                        <ul class="hero-tags"><li>Posts and stories</li><li>Banners</li><li>Campaign graphics</li></ul>
+                        <div class="svc-actions">
+                            <a class="btn btn-fill" href="contact.html">Start a project</a>
+                            <a class="btn btn-ghost" href="portfolio.html">View our work</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-reveal style="--d:.15s">
+                        <article class="card-x svc-panel">
+                            <div class="svc-panel-head">
+                                <span class="svc-panel-icon"><i class="bi bi-megaphone"></i></span>
+                                <h3>What's included</h3>
+                            </div>
+                            <ul class="svc-list">
+                            <li>Post and story designs</li>
+                            <li>Profile pictures and cover banners</li>
+                            <li>Promotion and campaign graphics</li>
+                            <li>Reusable templates for your team</li>
+                            <li>Every file sized for its platform</li>
+                            </ul>
+                            <div class="svc-meta">
+                                <div><span>Best for</span><strong>Brands that post regularly and want a consistent look</strong></div>
+                                <div><span>Delivered as</span><strong>Platform-ready image files</strong></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROCESS ===== -->
+        <section class="section svc-target" id="process" data-spy>
+            <div class="container-xl">
+                <div class="section-head" data-reveal>
+                    <h2>A clear process from first message to delivery</h2>
+                </div>
+                <div class="row g-4 steps">
+                    <div class="col-md-6 col-lg-3" data-reveal style="--d:0s">
+                        <div class="step"><span class="step-no">1</span>
+                            <h3>Brief</h3>
+                            <p>Tell us what you need, your goals and your deadline.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-reveal style="--d:.1s">
+                        <div class="step"><span class="step-no">2</span>
+                            <h3>Concept</h3>
+                            <p>We share ideas and a clear plan for your approval.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-reveal style="--d:.2s">
+                        <div class="step"><span class="step-no">3</span>
+                            <h3>Create</h3>
+                            <p>We build and refine the work with your feedback.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-reveal style="--d:.3s">
+                        <div class="step"><span class="step-no">4</span>
+                            <h3>Deliver</h3>
+                            <p>You receive the final files and everything you need to use them.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FAQ ===== -->
+        <section class="section section-alt svc-target" id="faq" data-spy>
+            <div class="container-xl">
+                <div class="row g-5">
+                    <div class="col-lg-4" data-reveal>
+                        <p class="kicker">FAQ</p>
+                        <h2 class="faq-title">Questions we often hear</h2>
+                        <p class="faq-text">Cannot find what you are looking for? Send us a message and we will help.</p>
+                        <a class="btn btn-ghost" href="contact.html">Contact us</a>
+                    </div>
+                    <div class="col-lg-8" data-reveal style="--d:.15s">
+                        <div class="accordion faq" id="faqList">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq0" aria-expanded="true" aria-controls="faq0">How do I start a project?</button>
+                            </h3>
+                            <div id="faq0" class="accordion-collapse collapse show" data-bs-parent="#faqList">
+                                <div class="accordion-body">Send us a message on the contact page with a short description of what you need. We will reply with a few questions and a plan for the next steps.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">Can I combine more than one service?</button>
+                            </h3>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqList">
+                                <div class="accordion-body">Yes. Many clients pair a brand identity with a website, or flyers with social media designs. Tell us what you want to achieve and we will put the right mix together.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">What do I need to provide?</button>
+                            </h3>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqList">
+                                <div class="accordion-body">Your business details, any existing logo or brand files, and the text and images you want to use. If you do not have these yet, we can help you plan them.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">Will I be able to update my website myself?</button>
+                            </h3>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqList">
+                                <div class="accordion-body">Tell us in your brief how often you expect to make changes. We will build the site with that in mind and walk you through what you need to know at handover.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">How does mentorship work?</button>
+                            </h3>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqList">
+                                <div class="accordion-body">Sessions are one-on-one and shaped around your level and goals. Share where you are now and where you want to be, and we will build the plan around that.</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA BAND ===== -->
+        <section class="section">
+            <div class="container-xl">
+                <div class="cta-band" data-reveal>
+                    <h2>Not sure which service you need?</h2>
+                    <p>Tell us about your goals and we will recommend the right mix.</p>
+                    <a class="btn btn-fill" href="contact.html">Start a project</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container-xl">
+            <div class="row g-5 footer-main">
+                <div class="col-lg-4" data-reveal>
+                    <a href="index.html" class="footer-logo"><img src="5.png" alt="SZKAY Design Agency"></a>
+                    <p class="footer-about">A design agency building brands, websites and digital assets that help
+                        businesses stand out.</p>
+                    <div class="socials"><a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a><a href="#"
+                            aria-label="X"><i class="bi bi-twitter-x"></i></a><a href="#" aria-label="Telegram"><i
+                                class="bi bi-telegram"></i></a><a href="#" aria-label="Instagram"><i
+                                class="bi bi-instagram"></i></a><a href="#" aria-label="LinkedIn"><i
+                                class="bi bi-linkedin"></i></a><a href="#" aria-label="Behance"><i
+                                class="bi bi-behance"></i></a></div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-reveal style="--d:.1s">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Start a project</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-reveal style="--d:.2s">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#website-development">Website development</a></li>
+                        <li><a href="services.html#brand-identity">Brand identity design</a></li>
+                        <li><a href="services.html#flyer-designs">Flyer designs</a></li>
+                        <li><a href="services.html#mentorship">Mentorship</a></li>
+                        <li><a href="services.html#digital-products">Digital products</a></li>
+                        <li><a href="services.html#social-media-design">Social media design</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3" data-reveal style="--d:.3s">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></li>
+                        <li><a href="#">WhatsApp <i class="bi bi-arrow-up-right"></i></a></li>
+                        <li><a href="#">Instagram <i class="bi bi-arrow-up-right"></i></a></li>
+                        <li><a href="#">Behance <i class="bi bi-arrow-up-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; <span id="year"></span> Szkay Design Agency. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    
+    <button class="to-top" id="toTop" type="button" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- Shared site JS, then this page's JS -->
+    <script src="index.js"></script>
+    <script src="services.js"></script>
+
+</body>
+
+</html>

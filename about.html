@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About | Szkay Design Agency</title>
+    <meta name="description"
+        content="Learn about Szkay Design Agency: who we are, what we believe and how we help businesses and creators with brand identity, websites, flyers and digital assets.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Shared site CSS, then this page's CSS -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg site-nav" aria-label="Main navigation">
+            <div class="container-fluid px-3 px-lg-4">
+
+                <!-- Logo (left) -->
+                <a class="navbar-brand site-logo" href="index.html">
+                    <img src="icon.png" alt="SZKAY Design Agency" class="logo-img">
+                </a>
+
+                <!-- Thin divider between logo and links (desktop only) -->
+                <span class="logo-divider d-none d-lg-block" aria-hidden="true"></span>
+
+                <!-- Mobile toggler -->
+                <button class="navbar-toggler site-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="toggler-bar"></span>
+                    <span class="toggler-bar"></span>
+                    <span class="toggler-bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+
+                    <!-- Links (next to the logo) -->
+                    <ul class="navbar-nav site-links">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a>
+                        </li>
+
+                        <!-- Services mega dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="services.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                            <div class="dropdown-menu mega-menu">
+                                <div class="mega-grid">
+                                    <a class="mega-item" href="services.html#website-development" style="--i:0">
+                                        <span class="mega-icon"><i class="bi bi-code-slash"></i></span>
+                                        <span class="mega-text"><strong>Website development</strong><small>Fast,
+                                                responsive websites built to convert</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#brand-identity" style="--i:1">
+                                        <span class="mega-icon"><i class="bi bi-vector-pen"></i></span>
+                                        <span class="mega-text"><strong>Brand identity design</strong><small>Logos,
+                                                colours and brand guidelines</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#flyer-designs" style="--i:2">
+                                        <span class="mega-icon"><i class="bi bi-card-image"></i></span>
+                                        <span class="mega-text"><strong>Flyer designs</strong><small>Print and digital
+                                                flyers that get noticed</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#mentorship" style="--i:3">
+                                        <span class="mega-icon"><i class="bi bi-mortarboard"></i></span>
+                                        <span class="mega-text"><strong>Mentorship</strong><small>One-on-one guidance in
+                                                design and code</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#digital-products" style="--i:4">
+                                        <span class="mega-icon"><i class="bi bi-box-seam"></i></span>
+                                        <span class="mega-text"><strong>Digital products</strong><small>Templates, kits
+                                                and ready-to-use assets</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#social-media-design" style="--i:5">
+                                        <span class="mega-icon"><i class="bi bi-megaphone"></i></span>
+                                        <span class="mega-text"><strong>Social media design</strong><small>Posts,
+                                                banners and campaign graphics</small></span>
+                                    </a>
+                                </div>
+                                <div class="mega-foot"><a href="services.html">View all services <i
+                                            class="bi bi-arrow-right"></i></a></div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <!-- Actions (right) -->
+                    <div class="nav-actions ms-lg-auto">
+                        <a class="btn nav-cta" href="contact.html">Start a project</a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Scroll progress line -->
+        <div class="scroll-progress" aria-hidden="true"></div>
+    </header>
+
+    <main>
+
+        <!-- ===== PAGE HERO ===== -->
+        <section class="page-hero">
+            <div class="container-xl">
+                <nav class="crumbs" aria-label="Breadcrumb" data-reveal>
+                    <a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">About</span>
+                </nav>
+                <h1 class="hero-title">We turn ideas into brands people remember.</h1>
+                <p class="lead-text" data-reveal style="--d:.2s">Szkay is a design agency that creates brand identities,
+                    websites, flyers and digital assets for businesses and creators who want to look professional and
+                    grow.</p>
+                <div class="hero-actions" data-reveal style="--d:.3s">
+                    <a class="btn btn-fill" href="contact.html">Start a project</a>
+                    <a class="btn btn-ghost" href="portfolio.html">View our work</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== OUR STORY ===== -->
+        <section class="section ab-story" id="story">
+            <div class="container-xl">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6" data-reveal>
+                        <p class="kicker">Our story</p>
+                        <h2>A design agency built on clarity and craft</h2>
+                        <p class="ab-text">We started with a simple belief: good design should help a business be
+                            understood, trusted and remembered. Every project begins with listening, so the work we
+                            create reflects who you are and who you want to reach.</p>
+                        <p class="ab-text">Today we bring design and development together, from the logo on your flyer
+                            to the website your customers visit, so your brand looks and feels consistent everywhere. We
+                            also mentor aspiring designers and developers who want to build their own skills.</p>
+                        <ul class="hero-tags">
+                            <li>Brand identity</li>
+                            <li>Websites</li>
+                            <li>Print and digital</li>
+                            <li>Mentorship</li>
+                        </ul>
+                        <a class="btn btn-fill" href="services.html">Explore our services</a>
+                    </div>
+                    <div class="col-lg-6" data-reveal style="--d:.15s">
+                        <!-- Replace 2.jpg with a photo of your own (portrait works best) -->
+                        <div class="about-visual">
+                            <div class="about-frame">
+                                <img src="2.jpg" alt="Szkay Design Agency creative work" loading="lazy">
+                            </div>
+                            <span class="float-chip c1"><i class="bi bi-vector-pen"></i> Design</span>
+                            <span class="float-chip c2"><i class="bi bi-code-slash"></i> Develop</span>
+                            <span class="float-chip c3"><i class="bi bi-graph-up-arrow"></i> Grow</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== MISSION / VISION / PROMISE ===== -->
+        <section class="section section-alt ab-mission" id="mission">
+            <div class="container-xl">
+                <div class="section-head" data-reveal>
+                    <p class="kicker">What drives us</p>
+                    <h2>The ideas behind every project</h2>
+                </div>
+                <div class="ab-tabs" data-reveal>
+                    <div class="ab-tablist" role="tablist" aria-label="Our mission, vision and promise" aria-orientation="vertical">
+                            <button class="ab-tab" type="button" role="tab" id="tab-mission" aria-controls="panel-mission"
+                                aria-selected="true" data-tab="mission"><span class="ab-tab-no">01</span>Our mission<i class="bi bi-arrow-right"></i></button>
+                            <button class="ab-tab" type="button" role="tab" id="tab-vision" aria-controls="panel-vision"
+                                aria-selected="false" data-tab="vision" tabindex="-1"><span class="ab-tab-no">02</span>Our vision<i class="bi bi-arrow-right"></i></button>
+                            <button class="ab-tab" type="button" role="tab" id="tab-promise" aria-controls="panel-promise"
+                                aria-selected="false" data-tab="promise" tabindex="-1"><span class="ab-tab-no">03</span>Our promise<i class="bi bi-arrow-right"></i></button>
+                    </div>
+                    <div class="ab-panels">
+                            <article class="card-x ab-panel is-active" role="tabpanel" id="panel-mission" aria-labelledby="tab-mission" tabindex="0">
+                                <h3>To help businesses and creators look professional, communicate clearly and grow through thoughtful design and well-built websites.</h3>
+                                <p>Everything we make has a job to do. We design with your goals in mind, so the result is not just good-looking but useful.</p>
+                                <ul class="ab-points">
+                                    <li>Design that is clear, consistent and on brand</li>
+                                    <li>Websites that are fast, responsive and easy to use</li>
+                                    <li>Work that helps you win trust and enquiries</li>
+                                </ul>
+                            </article>
+                            <article class="card-x ab-panel" role="tabpanel" id="panel-vision" aria-labelledby="tab-vision" tabindex="0" hidden>
+                                <h3>To be the design partner people trust to bring their ideas to life, and to help the next generation of designers and developers find their footing.</h3>
+                                <p>We want every client to leave with work they are proud of, and every mentee to leave with skills and confidence they can build on.</p>
+                                <ul class="ab-points">
+                                    <li>A trusted partner for brands of every size</li>
+                                    <li>Design and development working together under one roof</li>
+                                    <li>A community of growing creatives</li>
+                                </ul>
+                            </article>
+                            <article class="card-x ab-panel" role="tabpanel" id="panel-promise" aria-labelledby="tab-promise" tabindex="0" hidden>
+                                <h3>Clear communication, honest advice and work we are proud to put our name on, from the first message to the final delivery.</h3>
+                                <p>We keep you informed, listen to your feedback and tell you what we think, even when it is not what you expected to hear.</p>
+                                <ul class="ab-points">
+                                    <li>No jargon, just plain and honest communication</li>
+                                    <li>Your feedback shapes the final result</li>
+                                    <li>Everything you need to use your files, handed over</li>
+                                </ul>
+                            </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== VALUES ===== -->
+        <section class="section" id="values">
+            <div class="container-xl">
+                <div class="section-head" data-reveal>
+                    <p class="kicker">Our values</p>
+                    <h2>How we work, and what you can expect from us</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4" data-reveal style="--d:0.0s">
+                        <article class="card-x val-card">
+                            <span class="val-icon"><i class="bi bi-eye"></i></span>
+                            <h3>Clarity</h3>
+                            <p>Simple, purposeful design that says the right thing quickly and is easy to understand.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-reveal style="--d:0.1s">
+                        <article class="card-x val-card">
+                            <span class="val-icon"><i class="bi bi-vector-pen"></i></span>
+                            <h3>Craft</h3>
+                            <p>We care about the details, from spacing and typography to clean, fast code.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-reveal style="--d:0.2s">
+                        <article class="card-x val-card">
+                            <span class="val-icon"><i class="bi bi-layers"></i></span>
+                            <h3>Consistency</h3>
+                            <p>One look and feel across your website, print materials and social media.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-reveal style="--d:0.0s">
+                        <article class="card-x val-card">
+                            <span class="val-icon"><i class="bi bi-people"></i></span>
+                            <h3>Collaboration</h3>
+                            <p>You are part of the process. We listen, share ideas and refine the work together.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-reveal style="--d:0.1s">
+                        <article class="card-x val-card">
+                            <span class="val-icon"><i class="bi bi-shield-check"></i></span>
+                            <h3>Reliability</h3>
+                            <p>Clear communication, honest updates and work delivered the way we promised.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-reveal style="--d:0.2s">
+                        <article class="card-x val-card">
+                            <span class="val-icon"><i class="bi bi-graph-up-arrow"></i></span>
+                            <h3>Growth</h3>
+                            <p>We build for where your business is going, and help others grow their skills through mentorship.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== WHAT WE DO ===== -->
+        <section class="section section-alt ab-what" id="what-we-do">
+            <div class="container-xl">
+                <div class="section-head d-flex flex-wrap justify-content-between align-items-end gap-3" data-reveal>
+                    <div style="max-width:640px">
+                        <p class="kicker">What we do</p>
+                        <h2 class="mb-0">Everything your brand needs, in one place</h2>
+                    </div>
+                    <a class="btn btn-ghost" href="services.html">View all services</a>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-6 col-lg-4" data-reveal style="--d:0.00s">
+                        <a class="what-tile" href="services.html#website-development">
+                            <span class="what-icon"><i class="bi bi-code-slash"></i></span>Website development
+                            <i class="bi bi-arrow-right what-arrow"></i>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-reveal style="--d:0.08s">
+                        <a class="what-tile" href="services.html#brand-identity">
+                            <span class="what-icon"><i class="bi bi-vector-pen"></i></span>Brand identity design
+                            <i class="bi bi-arrow-right what-arrow"></i>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-reveal style="--d:0.16s">
+                        <a class="what-tile" href="services.html#flyer-designs">
+                            <span class="what-icon"><i class="bi bi-card-image"></i></span>Flyer designs
+                            <i class="bi bi-arrow-right what-arrow"></i>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-reveal style="--d:0.00s">
+                        <a class="what-tile" href="services.html#mentorship">
+                            <span class="what-icon"><i class="bi bi-mortarboard"></i></span>Mentorship
+                            <i class="bi bi-arrow-right what-arrow"></i>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-reveal style="--d:0.08s">
+                        <a class="what-tile" href="services.html#digital-products">
+                            <span class="what-icon"><i class="bi bi-box-seam"></i></span>Digital products
+                            <i class="bi bi-arrow-right what-arrow"></i>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-reveal style="--d:0.16s">
+                        <a class="what-tile" href="services.html#social-media-design">
+                            <span class="what-icon"><i class="bi bi-megaphone"></i></span>Social media design
+                            <i class="bi bi-arrow-right what-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA BAND ===== -->
+        <section class="section">
+            <div class="container-xl">
+                <div class="cta-band" data-reveal>
+                    <h2>Ready to work together?</h2>
+                    <p>Tell us about your project and we will get back to you with a plan.</p>
+                    <a class="btn btn-fill" href="contact.html">Start a project</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container-xl">
+            <div class="row g-5 footer-main">
+                <div class="col-lg-4" data-reveal>
+                    <a href="index.html" class="footer-logo"><img src="5.png" alt="SZKAY Design Agency"></a>
+                    <p class="footer-about">A design agency building brands, websites and digital assets that help
+                        businesses stand out.</p>
+                    <div class="socials"><a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a><a href="#"
+                            aria-label="X"><i class="bi bi-twitter-x"></i></a><a href="#" aria-label="Telegram"><i
+                                class="bi bi-telegram"></i></a><a href="#" aria-label="Instagram"><i
+                                class="bi bi-instagram"></i></a><a href="#" aria-label="LinkedIn"><i
+                                class="bi bi-linkedin"></i></a><a href="#" aria-label="Behance"><i
+                                class="bi bi-behance"></i></a></div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-reveal style="--d:.1s">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Start a project</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-reveal style="--d:.2s">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#website-development">Website development</a></li>
+                        <li><a href="services.html#brand-identity">Brand identity design</a></li>
+                        <li><a href="services.html#flyer-designs">Flyer designs</a></li>
+                        <li><a href="services.html#mentorship">Mentorship</a></li>
+                        <li><a href="services.html#digital-products">Digital products</a></li>
+                        <li><a href="services.html#social-media-design">Social media design</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3" data-reveal style="--d:.3s">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></li>
+                        <li><a href="#">WhatsApp <i class="bi bi-arrow-up-right"></i></a></li>
+                        <li><a href="#">Instagram <i class="bi bi-arrow-up-right"></i></a></li>
+                        <li><a href="#">Behance <i class="bi bi-arrow-up-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; <span id="year"></span> Szkay Design Agency. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    
+    <button class="to-top" id="toTop" type="button" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- Shared site JS, then this page's JS -->
+    <script src="index.js"></script>
+    <script src="about.js"></script>
+
+</body>
+
+</html>
