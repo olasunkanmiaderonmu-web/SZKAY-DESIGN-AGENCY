@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Szkay Design Agency</title>
+    <meta name="description"
+        content="Start a project with Szkay Design Agency. Tell us about your website, brand identity, flyer or social media design needs and we will get back to you.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Shared site CSS, then this page's CSS -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg site-nav" aria-label="Main navigation">
+            <div class="container-fluid px-3 px-lg-4">
+
+                <!-- Logo (left) -->
+                <a class="navbar-brand site-logo" href="index.html">
+                    <img src="icon.png" alt="SZKAY Design Agency" class="logo-img">
+                </a>
+
+                <!-- Thin divider between logo and links (desktop only) -->
+                <span class="logo-divider d-none d-lg-block" aria-hidden="true"></span>
+
+                <!-- Mobile toggler -->
+                <button class="navbar-toggler site-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="toggler-bar"></span>
+                    <span class="toggler-bar"></span>
+                    <span class="toggler-bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+
+                    <!-- Links (next to the logo) -->
+                    <ul class="navbar-nav site-links">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a>
+                        </li>
+
+                        <!-- Services mega dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="services.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                            <div class="dropdown-menu mega-menu">
+                                <div class="mega-grid">
+                                    <a class="mega-item" href="services.html#website-development" style="--i:0">
+                                        <span class="mega-icon"><i class="bi bi-code-slash"></i></span>
+                                        <span class="mega-text"><strong>Website development</strong><small>Fast,
+                                                responsive websites built to convert</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#brand-identity" style="--i:1">
+                                        <span class="mega-icon"><i class="bi bi-vector-pen"></i></span>
+                                        <span class="mega-text"><strong>Brand identity design</strong><small>Logos,
+                                                colours and brand guidelines</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#flyer-designs" style="--i:2">
+                                        <span class="mega-icon"><i class="bi bi-card-image"></i></span>
+                                        <span class="mega-text"><strong>Flyer designs</strong><small>Print and digital
+                                                flyers that get noticed</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#mentorship" style="--i:3">
+                                        <span class="mega-icon"><i class="bi bi-mortarboard"></i></span>
+                                        <span class="mega-text"><strong>Mentorship</strong><small>One-on-one guidance in
+                                                design and code</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#digital-products" style="--i:4">
+                                        <span class="mega-icon"><i class="bi bi-box-seam"></i></span>
+                                        <span class="mega-text"><strong>Digital products</strong><small>Templates, kits
+                                                and ready-to-use assets</small></span>
+                                    </a>
+                                    <a class="mega-item" href="services.html#social-media-design" style="--i:5">
+                                        <span class="mega-icon"><i class="bi bi-megaphone"></i></span>
+                                        <span class="mega-text"><strong>Social media design</strong><small>Posts,
+                                                banners and campaign graphics</small></span>
+                                    </a>
+                                </div>
+                                <div class="mega-foot"><a href="services.html">View all services <i
+                                            class="bi bi-arrow-right"></i></a></div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <!-- Actions (right) -->
+                    <div class="nav-actions ms-lg-auto">
+                        <a class="btn nav-cta" href="contact.html">Start a project</a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Scroll progress line -->
+        <div class="scroll-progress" aria-hidden="true"></div>
+    </header>
+
+    <main>
+
+        <!-- ===== PAGE HERO ===== -->
+        <section class="page-hero">
+            <div class="container-xl">
+                <nav class="crumbs" aria-label="Breadcrumb" data-reveal>
+                    <a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Contact</span>
+                </nav>
+                <h1 class="hero-title">Let&rsquo;s talk about your project.</h1>
+                <p class="lead-text" data-reveal style="--d:.2s">Tell us what you have in mind and we will get back to you with
+                    questions, ideas and a plan for the next steps.</p>
+                <div class="hero-actions" data-reveal style="--d:.3s">
+                    <a class="btn btn-fill" href="#message-form">Send a message</a>
+                    <a class="btn btn-ghost" href="mailto:hello@yourdomain.com">Email us directly</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FORM + DETAILS ===== -->
+        <section class="section ct-section">
+            <div class="container-xl">
+                <div class="row g-5">
+
+                    <!-- Form -->
+                    <div class="col-lg-7" id="message-form" data-reveal>
+                        <div class="ct-card" id="contactCard">
+
+                            <div class="ct-form-wrap">
+                                <h2>Send us a message</h2>
+                                <p class="ct-intro">Fill in the form and we will reply to your email. Fields marked
+                                    <span class="text-nowrap" style="color:var(--brand-orange)">*</span> are required.</p>
+
+                                <div class="ct-alert" id="ctAlert" role="alert" hidden>
+                                    <span id="ctAlertText"></span>
+                                    You can also email us at <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>.
+                                </div>
+
+                                <form id="contactForm" novalidate>
+                                    <div class="row g-x-3">
+                                        <div class="col-md-6">
+                                            <div class="ct-field">
+                                                <label class="ct-label" for="name">Full name <span class="req">*</span></label>
+                                                <input class="ct-input" type="text" id="name" name="name" autocomplete="name"
+                                                    placeholder="Your name" maxlength="80" required aria-describedby="name-error">
+                                                <p class="ct-error" id="name-error"></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="ct-field">
+                                                <label class="ct-label" for="email">Email address <span class="req">*</span></label>
+                                                <input class="ct-input" type="email" id="email" name="email" autocomplete="email"
+                                                    placeholder="you@example.com" maxlength="120" required aria-describedby="email-error">
+                                                <p class="ct-error" id="email-error"></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="ct-field">
+                                                <label class="ct-label" for="phone">Phone / WhatsApp <span class="opt">(optional)</span></label>
+                                                <input class="ct-input" type="tel" id="phone" name="phone" autocomplete="tel"
+                                                    placeholder="+1 234 567 890" maxlength="25" aria-describedby="phone-error">
+                                                <p class="ct-error" id="phone-error"></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="ct-field">
+                                                <label class="ct-label" for="service">Service <span class="req">*</span></label>
+                                                <select class="ct-input" id="service" name="service" required aria-describedby="service-error">
+                                                    <option value="" selected disabled>Choose a service</option>
+                                    <option value="website-development">Website development</option>
+                                    <option value="brand-identity">Brand identity design</option>
+                                    <option value="flyer-designs">Flyer designs</option>
+                                    <option value="mentorship">Mentorship</option>
+                                    <option value="digital-products">Digital products</option>
+                                    <option value="social-media-design">Social media design</option>
+                                    <option value="other">Something else</option>
+                                                </select>
+                                                <p class="ct-error" id="service-error"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ct-field">
+                                        <label class="ct-label" for="message">Your message <span class="req">*</span></label>
+                                        <textarea class="ct-input" id="message" name="message" rows="6" maxlength="1000"
+                                            placeholder="Tell us about your project, goals and timeline..." required
+                                            aria-describedby="message-error"></textarea>
+                                        <div class="ct-meta">
+                                            <p class="ct-error" id="message-error"></p>
+                                            <span class="ct-count" id="ctCount" aria-hidden="true">0 / 1000</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Spam trap: hidden from people, bots fill it in -->
+                                    <div class="ct-hp" aria-hidden="true">
+                                        <label for="company_website">Leave this field empty</label>
+                                        <input type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off">
+                                    </div>
+
+                                    <div class="ct-submit">
+                                        <button class="btn btn-fill" type="submit" id="ctSubmit">
+                                            <span class="btn-text">Send message</span>
+                                            <i class="bi bi-arrow-right btn-arrow" aria-hidden="true"></i>
+                                            <span class="btn-spin" aria-hidden="true"></span>
+                                        </button>
+                                        <p class="ct-note">We only use your details to reply to your enquiry.</p>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Shown after a successful send -->
+                            <div class="ct-success" id="ctSuccess" role="status" hidden>
+                                <svg class="ct-check" viewBox="0 0 52 52" aria-hidden="true">
+                                    <circle class="ct-check-circle" cx="26" cy="26" r="24"></circle>
+                                    <path class="ct-check-mark" d="M14 27l8 8 16-17"></path>
+                                </svg>
+                                <h2 tabindex="-1">Thank you, <span id="ctSuccessName"></span>!</h2>
+                                <p>Your message is on its way. We will reply to <strong id="ctSuccessEmail"></strong> as soon as we can.</p>
+                                <button class="btn btn-ghost" type="button" id="ctAgain">Send another message</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Details -->
+                    <div class="col-lg-5" data-reveal style="--d:.15s">
+                        <div class="ct-side">
+                            <div>
+                                <h2 class="ct-side-title">Prefer another way?</h2>
+                                <p class="ct-side-text">Reach us directly and we will get back to you.</p>
+                            </div>
+
+                            <a class="ct-item" href="mailto:hello@yourdomain.com">
+                                <span class="ct-item-icon"><i class="bi bi-envelope-fill"></i></span>
+                                <span><small>Email</small><strong>hello@yourdomain.com</strong></span>
+                                <i class="bi bi-arrow-up-right ct-item-arrow"></i>
+                            </a>
+
+                            <!-- Replace # with your WhatsApp link, e.g. https://wa.me/1234567890 -->
+                            <a class="ct-item" href="#" target="_blank" rel="noopener">
+                                <span class="ct-item-icon"><i class="bi bi-whatsapp"></i></span>
+                                <span><small>WhatsApp</small><strong>Chat with us</strong></span>
+                                <i class="bi bi-arrow-up-right ct-item-arrow"></i>
+                            </a>
+
+                            <div class="ct-social">
+                                <small>Follow our work</small>
+                                <div class="socials">
+                                    <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                                    <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                                    <a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+                                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                    <a href="#" aria-label="Behance"><i class="bi bi-behance"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== WHAT HAPPENS NEXT ===== -->
+        <section class="section section-alt">
+            <div class="container-xl">
+                <div class="section-head" data-reveal>
+                    <h2>What happens after you send your message</h2>
+                </div>
+                <div class="row g-4 steps">
+                    <div class="col-md-4" data-reveal style="--d:0s">
+                        <div class="step"><span class="step-no">1</span>
+                            <h3>We read your message</h3>
+                            <p>We go through your details and what you need, so we understand your goals.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-reveal style="--d:.1s">
+                        <div class="step"><span class="step-no">2</span>
+                            <h3>We reply to you</h3>
+                            <p>You hear back from us by email with questions, ideas or the next steps.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-reveal style="--d:.2s">
+                        <div class="step"><span class="step-no">3</span>
+                            <h3>We agree a plan</h3>
+                            <p>Together we agree the scope, timeline and cost, then get started.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container-xl">
+            <div class="row g-5 footer-main">
+                <div class="col-lg-4" data-reveal>
+                    <a href="index.html" class="footer-logo"><img src="5.png" alt="SZKAY Design Agency"></a>
+                    <p class="footer-about">A design agency building brands, websites and digital assets that help
+                        businesses stand out.</p>
+                    <div class="socials"><a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a><a href="#"
+                            aria-label="X"><i class="bi bi-twitter-x"></i></a><a href="#" aria-label="Telegram"><i
+                                class="bi bi-telegram"></i></a><a href="#" aria-label="Instagram"><i
+                                class="bi bi-instagram"></i></a><a href="#" aria-label="LinkedIn"><i
+                                class="bi bi-linkedin"></i></a><a href="#" aria-label="Behance"><i
+                                class="bi bi-behance"></i></a></div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-reveal style="--d:.1s">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Start a project</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-reveal style="--d:.2s">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#website-development">Website development</a></li>
+                        <li><a href="services.html#brand-identity">Brand identity design</a></li>
+                        <li><a href="services.html#flyer-designs">Flyer designs</a></li>
+                        <li><a href="services.html#mentorship">Mentorship</a></li>
+                        <li><a href="services.html#digital-products">Digital products</a></li>
+                        <li><a href="services.html#social-media-design">Social media design</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3" data-reveal style="--d:.3s">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></li>
+                        <li><a href="#">WhatsApp <i class="bi bi-arrow-up-right"></i></a></li>
+                        <li><a href="#">Instagram <i class="bi bi-arrow-up-right"></i></a></li>
+                        <li><a href="#">Behance <i class="bi bi-arrow-up-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; <span id="year"></span> Szkay Design Agency. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    
+    <button class="to-top" id="toTop" type="button" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- EmailJS SDK (sends the form) -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- Shared site JS, then this page's JS -->
+    <script src="index.js"></script>
+    <script src="contact.js"></script>
+
+</body>
+
+</html>

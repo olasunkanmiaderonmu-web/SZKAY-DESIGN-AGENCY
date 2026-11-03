@@ -87,6 +87,15 @@
   var counter = document.getElementById('pfCounter');
   var prev = document.getElementById('pfPrev');
   var next = document.getElementById('pfNext');
+  var cta = document.getElementById('pfCta');
+  // project category -> value of the Service menu on the contact form
+  var serviceFor = {
+    'websites': 'website-development',
+    'brand-identity': 'brand-identity',
+    'flyers': 'flyer-designs',
+    'social-media': 'social-media-design',
+    'digital-products': 'digital-products'
+  };
 
   var list = [];
   var index = 0;
@@ -113,6 +122,8 @@
         tags.appendChild(li);
       });
       counter.textContent = (index + 1) + ' / ' + list.length;
+      var cat = card.closest('.pf-item').getAttribute('data-category');
+      cta.href = 'contact.html?service=' + (serviceFor[cat] || 'other');
     };
 
     if (!animate || reduce) { set(); return; }
