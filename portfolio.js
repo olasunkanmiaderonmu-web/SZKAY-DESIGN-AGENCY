@@ -74,12 +74,13 @@
   var valid = chips.some(function (c) { return c.getAttribute('data-filter') === wanted; });
   applyFilter(valid ? wanted : 'all', true);
 
-  // ===== Project modal =====
+  // ===== Project pop-up: shows ONE project, and the arrows move through ITS images =====
   var modalEl = document.getElementById('projectModal');
   if (!modalEl) return;
 
   var media = modalEl.querySelector('.pf-media');
   var img = document.getElementById('pfImg');
+  var caption = document.getElementById('pfCaption');
   var kicker = document.getElementById('pfKicker');
   var title = document.getElementById('projectModalTitle');
   var desc = document.getElementById('pfDesc');
@@ -97,55 +98,86 @@
     'digital-products': 'digital-products'
   };
 
-  var list = [];
-  var index = 0;
+  var slides = [];   // the images of the project that is open
+  var current = 0;   // which slide is showing
+  var token = 0;     // makes sure fast clicks never leave the image half-faded
 
-  function visibleCards() {
-    return items
-      .filter(function (i) { return !i.classList.contains('d-none') && !i.classList.contains('is-out'); })
-      .map(function (i) { return i.querySelector('.pf-card'); });
+  // Reads the slides from the <img> tags inside the card's <div class="pf-slides">
+  function readSlides(card) {
+    var out = [].map.call(card.querySelectorAll('.pf-slides img'), function (n) {
+      return {
+        src: n.getAttribute('src'),
+        alt: n.getAttribute('alt') || '',
+        caption: n.getAttribute('data-caption') || ''
+      };
+    });
+    if (!out.length) {  // no slides listed: fall back to the card's own image
+      var thumb = card.querySelector('.work-thumb img');
+      if (thumb) out.push({ src: thumb.getAttribute('src'), alt: thumb.getAttribute('alt') || '', caption: '' });
+    }
+    return out;
   }
 
-  function fill(card, animate) {
-    var set = function () {
-      img.src = card.getAttribute('data-img');
-      img.alt = card.getAttribute('data-alt') || card.getAttribute('data-title');
-      kicker.textContent = card.getAttribute('data-label');
-      title.textContent = card.getAttribute('data-title');
-      desc.textContent = card.getAttribute('data-desc');
-      tags.innerHTML = '';
-      (card.getAttribute('data-tags') || '').split(',').forEach(function (t) {
-        t = t.trim();
-        if (!t) return;
-        var li = document.createElement('li');
-        li.textContent = t;
-        tags.appendChild(li);
-      });
-      counter.textContent = (index + 1) + ' / ' + list.length;
-      var cat = card.closest('.pf-item').getAttribute('data-category');
-      cta.href = 'contact.html?service=' + (serviceFor[cat] || 'other');
+  // Project details: filled ONCE when the pop-up opens and never touched by the arrows
+  function fillDetails(card) {
+    kicker.textContent = card.getAttribute('data-label');
+    title.textContent = card.getAttribute('data-title');
+    desc.textContent = card.getAttribute('data-desc');
+    tags.innerHTML = '';
+    (card.getAttribute('data-tags') || '').split(',').forEach(function (t) {
+      t = t.trim();
+      if (!t) return;
+      var li = document.createElement('li');
+      li.textContent = t;
+      tags.appendChild(li);
+    });
+    var cat = card.closest('.pf-item').getAttribute('data-category');
+    cta.href = 'contact.html?service=' + (serviceFor[cat] || 'other');
+
+    var fit = card.getAttribute('data-fit') === 'contain' ? 'contain' : 'cover';
+    media.style.setProperty('--pf-fit', fit);
+    media.style.setProperty('--pf-ratio', fit === 'contain' ? '16 / 9' : '4 / 3');
+  }
+
+  // Only the image (and its small label + counter) changes
+  function showSlide(i, animate) {
+    var s = slides[i];
+    var t = ++token;
+
+    var apply = function () {
+      if (t !== token) return;
+      var done = function () { if (t === token) media.classList.remove('is-swapping'); };
+      img.onload = done;
+      img.onerror = done;
+      img.src = s.src;
+      img.alt = s.alt;
+      caption.textContent = s.caption;
+      caption.hidden = !s.caption;
+      counter.textContent = (i + 1) + ' / ' + slides.length;
+      if (img.complete) done();
     };
 
-    if (!animate || reduce) { set(); return; }
+    if (!animate || reduce) { apply(); return; }
     media.classList.add('is-swapping');
-    setTimeout(function () {
-      set();
-      var done = function () { media.classList.remove('is-swapping'); };
-      if (img.complete) done(); else img.onload = done;
-    }, 250);
+    setTimeout(apply, 250);
   }
 
   function step(dir) {
-    if (list.length < 2) return;
-    index = (index + dir + list.length) % list.length;
-    fill(list[index], true);
+    if (slides.length < 2) return;
+    current = (current + dir + slides.length) % slides.length;
+    showSlide(current, true);
   }
 
   modalEl.addEventListener('show.bs.modal', function (e) {
-    list = visibleCards();
-    index = Math.max(0, list.indexOf(e.relatedTarget));
-    fill(list[index], false);
-    var many = list.length > 1;
+    var card = e.relatedTarget && e.relatedTarget.closest('.pf-card');
+    if (!card) return;
+    slides = readSlides(card);
+    current = 0;
+    fillDetails(card);
+    showSlide(0, false);
+    slides.forEach(function (s) { new Image().src = s.src; });  // warm up the other images
+
+    var many = slides.length > 1;
     prev.hidden = next.hidden = counter.hidden = !many;
   });
 
@@ -157,4 +189,14 @@
     if (e.key === 'ArrowLeft') step(-1);
     if (e.key === 'ArrowRight') step(1);
   });
+
+  // Swipe left / right on the image (phones and tablets)
+  var startX = null;
+  media.addEventListener('touchstart', function (e) { startX = e.changedTouches[0].clientX; }, { passive: true });
+  media.addEventListener('touchend', function (e) {
+    if (startX === null) return;
+    var dx = e.changedTouches[0].clientX - startX;
+    startX = null;
+    if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1);
+  }, { passive: true });
 })();

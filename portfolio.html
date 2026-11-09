@@ -98,7 +98,8 @@
                             </div>
                         </li>
 
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                href="portfolio.html">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
@@ -122,10 +123,12 @@
         <section class="page-hero">
             <div class="container-xl">
                 <nav class="crumbs" aria-label="Breadcrumb" data-reveal>
-                    <a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Portfolio</span>
+                    <a href="index.html">Home</a><span aria-hidden="true">/</span><span
+                        aria-current="page">Portfolio</span>
                 </nav>
                 <h1 class="hero-title">Work that shows what good design can do.</h1>
-                <p class="lead-text" data-reveal style="--d:.2s">A look at the websites, brand identities, flyers and digital
+                <p class="lead-text" data-reveal style="--d:.2s">A look at the websites, brand identities, flyers and
+                    digital
                     assets we have created. Browse by category, or open a project to see more.</p>
                 <div class="hero-actions" data-reveal style="--d:.3s">
                     <a class="btn btn-fill" href="contact.html">Start a project</a>
@@ -138,12 +141,18 @@
         <div class="pf-bar" role="group" aria-label="Filter projects by category">
             <div class="container-xl">
                 <ul class="pf-filters">
-                    <li><button class="pf-chip is-active" type="button" data-filter="all" aria-pressed="true">All <span class="pf-count"></span></button></li>
-                    <li><button class="pf-chip" type="button" data-filter="websites" aria-pressed="false">Website development <span class="pf-count"></span></button></li>
-                    <li><button class="pf-chip" type="button" data-filter="brand-identity" aria-pressed="false">Brand identity <span class="pf-count"></span></button></li>
-                    <li><button class="pf-chip" type="button" data-filter="flyers" aria-pressed="false">Flyer designs <span class="pf-count"></span></button></li>
-                    <li><button class="pf-chip" type="button" data-filter="social-media" aria-pressed="false">Social media design <span class="pf-count"></span></button></li>
-                    <li><button class="pf-chip" type="button" data-filter="digital-products" aria-pressed="false">Digital products <span class="pf-count"></span></button></li>
+                    <li><button class="pf-chip is-active" type="button" data-filter="all" aria-pressed="true">All <span
+                                class="pf-count"></span></button></li>
+                    <li><button class="pf-chip" type="button" data-filter="websites" aria-pressed="false">Website
+                            development <span class="pf-count"></span></button></li>
+                    <li><button class="pf-chip" type="button" data-filter="brand-identity" aria-pressed="false">Brand
+                            identity <span class="pf-count"></span></button></li>
+                    <li><button class="pf-chip" type="button" data-filter="flyers" aria-pressed="false">Flyer designs
+                            <span class="pf-count"></span></button></li>
+                    <li><button class="pf-chip" type="button" data-filter="social-media" aria-pressed="false">Social
+                            media design <span class="pf-count"></span></button></li>
+                    <li><button class="pf-chip" type="button" data-filter="digital-products"
+                            aria-pressed="false">Digital products <span class="pf-count"></span></button></li>
                 </ul>
             </div>
         </div>
@@ -151,122 +160,222 @@
         <!-- ===== PROJECT GRID ===== -->
         <section class="section pf-section" aria-live="polite">
             <div class="container-xl">
-                <!-- Each card holds its own project details in data-* attributes (used by the pop-up) -->
+                <!--
+                    HOW THE POP-UP SLIDES WORK
+                    - Every card below has its own <div class="pf-slides"> list. Each <img> inside it is one slide.
+                    - To ADD an image to a project: copy one <img ...> line inside that project's pf-slides and change src / alt.
+                      Add data-caption="Short label" if you want a small label shown on the image.
+                    - Slides appear in the same order as the <img> lines (first one is shown first).
+                    - The big image on the card itself is the <img> inside <div class="work-thumb">.
+                    - data-fit="contain" shows the whole image (best for screenshots); data-fit="cover" fills the frame (best for photos and flyers).
+                -->
                 <div class="row g-4" id="pfGrid">
                     <div class="col-md-6 col-lg-4 pf-item" data-category="websites" data-reveal style="--d:0.00s">
-                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal" data-bs-target="#projectModal"
-                            data-title="Business website" data-label="Website development" data-img="3.jpg" data-alt="Business website project preview"
-                            data-desc="A responsive multi-page website built to present a business clearly and make it easy for customers to get in touch." data-tags="Responsive design, HTML / CSS / JavaScript, Contact form">
+                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal"
+                            data-bs-target="#projectModal" data-title="Inventory Management System (Larazo Limited)"
+                            data-label="Website development" data-fit="contain"
+                            data-desc="A web-based inventory and store management system for Larazo Limited, a wholesale drinks business. It tracks stock in packs, records every sale, flags low and out-of-stock products, and shows daily and monthly sales, expenses and profit on a live dashboard. Staff accounts are approved by the owner for secure access."
+                            data-tags="Secure sign-in, Stock in, Sales records, Low-stock alerts, Profit reports">
                             <div class="work-thumb">
-                                <img src="3.jpg" alt="Business website project preview" loading="lazy">
+                                <img src="16.png" alt="Larazo Limited project preview" loading="lazy">
                                 <span class="work-view"><i class="bi bi-arrows-angle-expand"></i> View project</span>
                             </div>
                             <div class="work-info">
-                                <h3>Business website</h3><span>Website development</span>
+                                <h3>Larazo Limited</h3><span>Inventory Management System</span>
+                            </div>
+
+                            <!-- Slides shown in the pop-up for this project (one <img> per slide) -->
+                            <div class="pf-slides" hidden>
+                                <img src="6.png" alt="Larazo sign-in screen with owner-approved accounts"
+                                    data-caption="Secure sign-in" loading="lazy">
+                                <img src="7.png" alt="Larazo dashboard showing sales, stock levels and profit"
+                                    data-caption="Dashboard overview" loading="lazy">
+                                <img src="8.png" alt="Larazo products page with search, filters and stock status"
+                                    data-caption="Product management" loading="lazy">
+                                <img src="9.png" alt="Larazo sales page listing transactions with filters"
+                                    data-caption="Sales records" loading="lazy">
+                                <img src="11.png" alt="Larazo sales page listing transactions with filters"
+                                    data-caption="Sales history" loading="lazy">
+                                <img src="14.png" alt="Larazo sales page listing transactions with filters"
+                                    data-caption="Finance" loading="lazy">
+
                             </div>
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 pf-item" data-category="brand-identity" data-reveal style="--d:0.10s">
-                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal" data-bs-target="#projectModal"
-                            data-title="Logo and brand guide" data-label="Brand identity" data-img="2.jpg" data-alt="Logo and brand guide project preview"
-                            data-desc="A complete visual identity: logo, colour palette, typography and a guide that keeps the brand consistent everywhere." data-tags="Logo design, Colour palette, Brand guidelines">
+                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal"
+                            data-bs-target="#projectModal" data-title="Brand Identity (Nova Coffee Roasters)"
+                            data-label="Brand identity" data-fit="cover"
+                            data-desc="A complete visual identity for a specialty coffee roaster: logo, colour palette, typography and a brand guide that keeps packaging, signage and social media looking consistent."
+                            data-tags="Logo design, Colour palette, Typography, Brand guide">
                             <div class="work-thumb">
-                                <img src="2.jpg" alt="Logo and brand guide project preview" loading="lazy">
+                                <img src="2.jpg" alt="Nova Coffee Roasters project preview" loading="lazy">
                                 <span class="work-view"><i class="bi bi-arrows-angle-expand"></i> View project</span>
                             </div>
                             <div class="work-info">
-                                <h3>Logo and brand guide</h3><span>Brand identity</span>
+                                <h3>Nova Coffee Roasters</h3><span>Brand Identity</span>
+                            </div>
+
+                            <!-- Slides shown in the pop-up for this project (one <img> per slide) -->
+                            <div class="pf-slides" hidden>
+                                <img src="2.jpg" alt="Nova Coffee Roasters logo and brand preview" loading="lazy">
+                                <img src="1.jpg" alt="Nova Coffee Roasters brand applications" loading="lazy">
+                                <img src="3.jpg" alt="Nova Coffee Roasters brand guide pages" loading="lazy">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 pf-item" data-category="flyers" data-reveal style="--d:0.20s">
-                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal" data-bs-target="#projectModal"
-                            data-title="Event flyer" data-label="Flyer designs" data-img="1.jpg" data-alt="Event flyer project preview"
-                            data-desc="A bold flyer with a clear message and call to action, delivered ready for print and for sharing online." data-tags="Print-ready file, Digital version, Layout and artwork">
+                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal"
+                            data-bs-target="#projectModal" data-title="Event Flyer (Sunset Beats Festival)"
+                            data-label="Flyer designs" data-fit="cover"
+                            data-desc="A bold, high-energy flyer for a live music festival, with the date, venue and ticket details clear at a glance. Delivered ready for print and for sharing online."
+                            data-tags="Event layout, Print-ready file, Social media version">
                             <div class="work-thumb">
-                                <img src="1.jpg" alt="Event flyer project preview" loading="lazy">
+                                <img src="1.jpg" alt="Sunset Beats Festival project preview" loading="lazy">
                                 <span class="work-view"><i class="bi bi-arrows-angle-expand"></i> View project</span>
                             </div>
                             <div class="work-info">
-                                <h3>Event flyer</h3><span>Flyer designs</span>
+                                <h3>Sunset Beats Festival</h3><span>Event Flyer</span>
+                            </div>
+
+                            <!-- Slides shown in the pop-up for this project (one <img> per slide) -->
+                            <div class="pf-slides" hidden>
+                                <img src="1.jpg" alt="Sunset Beats Festival event flyer" loading="lazy">
+                                <img src="2.jpg" alt="Sunset Beats Festival flyer social media version" loading="lazy">
+                                <img src="3.jpg" alt="Sunset Beats Festival flyer print layout" loading="lazy">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 pf-item" data-category="websites" data-reveal style="--d:0.00s">
-                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal" data-bs-target="#projectModal"
-                            data-title="Portfolio website" data-label="Website development" data-img="3.jpg" data-alt="Portfolio website project preview"
-                            data-desc="A clean portfolio site that lets the work lead, with fast loading and a layout that works on every screen." data-tags="Responsive design, Gallery layout, Launch support">
+                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal"
+                            data-bs-target="#projectModal" data-title="Portfolio Website (Frame &amp; Light Studio)"
+                            data-label="Website development" data-fit="cover"
+                            data-desc="A clean, image-led portfolio website for a photography studio, with a gallery that loads quickly on any screen and a simple enquiry form so new clients can book a shoot."
+                            data-tags="Gallery layout, Image optimisation, Booking enquiry form">
                             <div class="work-thumb">
-                                <img src="3.jpg" alt="Portfolio website project preview" loading="lazy">
+                                <img src="3.jpg" alt="Frame &amp; Light Studio project preview" loading="lazy">
                                 <span class="work-view"><i class="bi bi-arrows-angle-expand"></i> View project</span>
                             </div>
                             <div class="work-info">
-                                <h3>Portfolio website</h3><span>Website development</span>
+                                <h3>Frame &amp; Light Studio</h3><span>Portfolio Website</span>
+                            </div>
+
+                            <!-- Slides shown in the pop-up for this project (one <img> per slide) -->
+                            <div class="pf-slides" hidden>
+                                <img src="3.jpg" alt="Frame &amp; Light Studio website home page" loading="lazy">
+                                <img src="1.jpg" alt="Frame &amp; Light Studio gallery page" loading="lazy">
+                                <img src="2.jpg" alt="Frame &amp; Light Studio enquiry page" loading="lazy">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 pf-item" data-category="social-media" data-reveal style="--d:0.10s">
-                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal" data-bs-target="#projectModal"
-                            data-title="Social media campaign" data-label="Social media design" data-img="1.jpg" data-alt="Social media campaign project preview"
-                            data-desc="A set of matching post and story designs that give a campaign one consistent, recognisable look." data-tags="Post designs, Story designs, Reusable templates">
+                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal"
+                            data-bs-target="#projectModal" data-title="Social Media Design (Glow Beauty Studio)"
+                            data-label="Social media design" data-fit="cover"
+                            data-desc="A matching set of post, story and cover designs that give a beauty studio's launch campaign one consistent, recognisable look across every platform."
+                            data-tags="Post designs, Story designs, Cover banners, Reusable templates">
                             <div class="work-thumb">
-                                <img src="1.jpg" alt="Social media campaign project preview" loading="lazy">
+                                <img src="1.jpg" alt="Glow Beauty Studio project preview" loading="lazy">
                                 <span class="work-view"><i class="bi bi-arrows-angle-expand"></i> View project</span>
                             </div>
                             <div class="work-info">
-                                <h3>Social media campaign</h3><span>Social media design</span>
+                                <h3>Glow Beauty Studio</h3><span>Social Media Design</span>
+                            </div>
+
+                            <!-- Slides shown in the pop-up for this project (one <img> per slide) -->
+                            <div class="pf-slides" hidden>
+                                <img src="1.jpg" alt="Glow Beauty Studio campaign posts" loading="lazy">
+                                <img src="3.jpg" alt="Glow Beauty Studio story designs" loading="lazy">
+                                <img src="2.jpg" alt="Glow Beauty Studio cover banner" loading="lazy">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 pf-item" data-category="brand-identity" data-reveal style="--d:0.20s">
-                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal" data-bs-target="#projectModal"
-                            data-title="Brand refresh" data-label="Brand identity" data-img="2.jpg" data-alt="Brand refresh project preview"
-                            data-desc="A fresh look for an established business, with an updated logo and colours that feel modern and confident." data-tags="Logo refresh, Colour palette, Stationery layouts">
+                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal"
+                            data-bs-target="#projectModal" data-title="Brand Refresh (Greenfield Organics)"
+                            data-label="Brand identity" data-fit="cover"
+                            data-desc="A modern refresh for an established organic grocer, with an updated logo, a brighter colour palette and new packaging label and stationery layouts."
+                            data-tags="Logo refresh, Colour palette, Packaging labels, Stationery">
                             <div class="work-thumb">
-                                <img src="2.jpg" alt="Brand refresh project preview" loading="lazy">
+                                <img src="2.jpg" alt="Greenfield Organics project preview" loading="lazy">
                                 <span class="work-view"><i class="bi bi-arrows-angle-expand"></i> View project</span>
                             </div>
                             <div class="work-info">
-                                <h3>Brand refresh</h3><span>Brand identity</span>
+                                <h3>Greenfield Organics</h3><span>Brand Refresh</span>
+                            </div>
+
+                            <!-- Slides shown in the pop-up for this project (one <img> per slide) -->
+                            <div class="pf-slides" hidden>
+                                <img src="2.jpg" alt="Greenfield Organics refreshed logo" loading="lazy">
+                                <img src="3.jpg" alt="Greenfield Organics packaging labels" loading="lazy">
+                                <img src="1.jpg" alt="Greenfield Organics stationery" loading="lazy">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 pf-item" data-category="websites" data-reveal style="--d:0.00s">
-                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal" data-bs-target="#projectModal"
-                            data-title="Landing page" data-label="Website development" data-img="3.jpg" data-alt="Landing page project preview"
-                            data-desc="A focused one-page site designed around a single goal: turning visitors into enquiries." data-tags="Landing page, Call to action, Mobile-first">
+                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal"
+                            data-bs-target="#projectModal" data-title="Landing Page (Swift Route Logistics)"
+                            data-label="Website development" data-fit="cover"
+                            data-desc="A focused one-page website for a delivery company, built around a clear call to action that turns visitors into quote requests."
+                            data-tags="Clear call to action, Quote request form, Mobile-first layout">
                             <div class="work-thumb">
-                                <img src="3.jpg" alt="Landing page project preview" loading="lazy">
+                                <img src="3.jpg" alt="Swift Route Logistics project preview" loading="lazy">
                                 <span class="work-view"><i class="bi bi-arrows-angle-expand"></i> View project</span>
                             </div>
                             <div class="work-info">
-                                <h3>Landing page</h3><span>Website development</span>
+                                <h3>Swift Route Logistics</h3><span>Landing Page</span>
+                            </div>
+
+                            <!-- Slides shown in the pop-up for this project (one <img> per slide) -->
+                            <div class="pf-slides" hidden>
+                                <img src="3.jpg" alt="Swift Route Logistics landing page" loading="lazy">
+                                <img src="2.jpg" alt="Swift Route Logistics quote form" loading="lazy">
+                                <img src="1.jpg" alt="Swift Route Logistics mobile view" loading="lazy">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 pf-item" data-category="flyers" data-reveal style="--d:0.10s">
-                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal" data-bs-target="#projectModal"
-                            data-title="Promotion flyer" data-label="Flyer designs" data-img="1.jpg" data-alt="Promotion flyer project preview"
-                            data-desc="An eye-catching promotional flyer that puts the offer front and centre and gets noticed." data-tags="Promotion design, Print-ready file, Social version">
+                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal"
+                            data-bs-target="#projectModal" data-title="Promotion Flyer (Urban Bites Kitchen)"
+                            data-label="Flyer designs" data-fit="cover"
+                            data-desc="An appetising promotional flyer for a restaurant's weekend offer, designed so the deal stands out at a glance and works in print and on WhatsApp."
+                            data-tags="Offer-led layout, Print-ready file, WhatsApp version">
                             <div class="work-thumb">
-                                <img src="1.jpg" alt="Promotion flyer project preview" loading="lazy">
+                                <img src="1.jpg" alt="Urban Bites Kitchen project preview" loading="lazy">
                                 <span class="work-view"><i class="bi bi-arrows-angle-expand"></i> View project</span>
                             </div>
                             <div class="work-info">
-                                <h3>Promotion flyer</h3><span>Flyer designs</span>
+                                <h3>Urban Bites Kitchen</h3><span>Promotion Flyer</span>
+                            </div>
+
+                            <!-- Slides shown in the pop-up for this project (one <img> per slide) -->
+                            <div class="pf-slides" hidden>
+                                <img src="1.jpg" alt="Urban Bites Kitchen promotion flyer" loading="lazy">
+                                <img src="2.jpg" alt="Urban Bites Kitchen flyer WhatsApp version" loading="lazy">
+                                <img src="3.jpg" alt="Urban Bites Kitchen flyer print layout" loading="lazy">
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-6 col-lg-4 pf-item" data-category="digital-products" data-reveal style="--d:0.20s">
-                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal" data-bs-target="#projectModal"
-                            data-title="Template pack" data-label="Digital products" data-img="2.jpg" data-alt="Template pack project preview"
-                            data-desc="A set of editable, ready-to-use templates that give creators a professional starting point." data-tags="Editable templates, Instructions, Ready-to-use files">
+                    <div class="col-md-6 col-lg-4 pf-item" data-category="digital-products" data-reveal
+                        style="--d:0.20s">
+                        <a class="work pf-card" href="#projectModal" role="button" data-bs-toggle="modal"
+                            data-bs-target="#projectModal" data-title="Template Pack (Brightbox Studio)"
+                            data-label="Digital products" data-fit="cover"
+                            data-desc="A set of editable, ready-to-use design templates that give small businesses and creators a professional starting point for their content."
+                            data-tags="Editable templates, Brand-ready layouts, Usage guide">
                             <div class="work-thumb">
-                                <img src="2.jpg" alt="Template pack project preview" loading="lazy">
+                                <img src="2.jpg" alt="Brightbox Studio project preview" loading="lazy">
                                 <span class="work-view"><i class="bi bi-arrows-angle-expand"></i> View project</span>
                             </div>
                             <div class="work-info">
-                                <h3>Template pack</h3><span>Digital products</span>
+                                <h3>Brightbox Studio</h3><span>Template Pack</span>
+                            </div>
+
+                            <!-- Slides shown in the pop-up for this project (one <img> per slide) -->
+                            <div class="pf-slides" hidden>
+                                <img src="2.jpg" alt="Brightbox Studio template pack overview" loading="lazy">
+                                <img src="3.jpg" alt="Brightbox Studio template examples" loading="lazy">
+                                <img src="1.jpg" alt="Brightbox Studio usage guide" loading="lazy">
                             </div>
                         </a>
                     </div>
@@ -343,16 +452,19 @@
         </div>
     </footer>
 
-    
+
     <button class="to-top" id="toTop" type="button" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
 
     <!-- ===== PROJECT POP-UP ===== -->
-    <div class="modal fade pf-modal" id="projectModal" tabindex="-1" aria-labelledby="projectModalTitle" aria-hidden="true">
+    <div class="modal fade pf-modal" id="projectModal" tabindex="-1" aria-labelledby="projectModalTitle"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
-                <button type="button" class="pf-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+                <button type="button" class="pf-close" data-bs-dismiss="modal" aria-label="Close"><i
+                        class="bi bi-x-lg"></i></button>
                 <div class="pf-modal-grid">
-                    <div class="pf-media"><img id="pfImg" src="" alt=""></div>
+                    <div class="pf-media"><img id="pfImg" src="" alt=""><span class="pf-caption" id="pfCaption"
+                            hidden></span></div>
                     <div class="pf-info">
                         <p class="pf-kicker" id="pfKicker"></p>
                         <h2 id="projectModalTitle"></h2>
@@ -361,8 +473,10 @@
                         <a class="btn btn-fill" id="pfCta" href="contact.html">Start a similar project</a>
                         <div class="pf-foot">
                             <span class="pf-counter" id="pfCounter" aria-live="polite"></span>
-                            <button type="button" class="pf-nav-btn" id="pfPrev" aria-label="Previous project"><i class="bi bi-arrow-left"></i></button>
-                            <button type="button" class="pf-nav-btn" id="pfNext" aria-label="Next project"><i class="bi bi-arrow-right"></i></button>
+                            <button type="button" class="pf-nav-btn" id="pfPrev" aria-label="Previous image"><i
+                                    class="bi bi-arrow-left"></i></button>
+                            <button type="button" class="pf-nav-btn" id="pfNext" aria-label="Next image"><i
+                                    class="bi bi-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
